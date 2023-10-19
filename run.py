@@ -14,4 +14,17 @@ def get_sign(day, month):
         period = signs[sign]
         if period["start"] <= birthday <= period["end"]:
             return sign
+    return "Invalid month or day"
+
+
+def main():
+    day = int(input("Enter the day of your birth: "))
+    month = int(input("Enter the month of your birth: "))
+
+    sign = get_sign(day, month)
+    sign = sign.lower()
+    print(f"Your zodiac sign is {sign}")
+
+main()
+
     
