@@ -3,18 +3,18 @@ from datetime import date
 signs = {
     "Aries": {
         "start": date(2023, 3, 21),
-        "end": date(2023, 4, 20)
+        "end": date(2023, 4, 19)
     },
     "Taurus": {
-        "start": date(2023, 4, 21),
+        "start": date(2023, 4, 20),
         "end": date(2023, 5, 20)
     },
     "Gemini": {
         "start": date(2023, 5, 21),
-        "end": date(2023, 6, 22)
+        "end": date(2023, 6, 20)
     },
     "Cancer": {
-        "start": date(2023, 6, 23),
+        "start": date(2023, 6, 21),
         "end": date(2023, 7, 22)
     },
     "Leo": {
