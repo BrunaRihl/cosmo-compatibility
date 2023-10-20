@@ -16,6 +16,12 @@ def get_sign(day, month):
             return sign
     return "Invalid month or day"
 
+def initial_screen():
+    font = pyfiglet.Figlet()
+    message = "Cosmo * Compatibility"
+    rendered_message = font.renderText(message)
+    print(rendered_message)
+    print("Welcome to the CosmoCompatibility Zodiac Traits Test!\nThis program will calculate the percentage of traits you share in common with your zodiac sign.")
 
 def main():
     day = int(input("Enter the day of your birth: "))
