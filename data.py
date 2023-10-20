@@ -50,3 +50,43 @@ signs = {
         "end": date(2023, 3, 20)
     },
 }
+
+
+data = [
+    {
+        "question": "What is your greatest attribute?",
+        "answer": {
+            "aries": "Courage",
+            "taurus": "Persistence",
+            "gemini": "Intelligence",
+            "cancer": "Empathy",
+            "leo": "Passion",
+            "virgo": "Precision",
+            "libra": "Diplomacy",
+            "scorpio": "Intensity",
+            "sagittarius": "Adventure",
+            "capricorn": "Determination",
+            "aquarius": "Originality",
+            "pisces": "Intuition"
+        }
+    },
+    {
+        "question": "How do you deal with emotional challenges?",
+        "answer": {
+            "aries": "Taking action and confronting them directly.",
+            "taurus": "Seeking comfort and emotional stability.",
+            "gemini": "Talking to others to gain different perspectives.",
+            "cancer": "Retreating to a safe space to process emotions.",
+            "leo": "Expressing oneself confidently and seeking attention and support.",
+            "virgo": "Analyzing the situation in detail to find practical solutions.",
+            "libra": "Striving for emotional balance and trying to find harmony.",
+            "scorpio": "Delving deep into emotions and seeking to understand the reasons behind them.",
+            "sagittarius": "Facing challenges with optimism and seeking new perspectives.",
+            "capricorn": "Keeping calm and finding rational solutions to overcome obstacles.",
+            "aquarius": "Finding innovative ways to deal with emotions and seeking independence.",
+            "pisces": "Surrendering to emotions and seeking creative ways to deal with them."
+        }
+    }
+
+]
+
