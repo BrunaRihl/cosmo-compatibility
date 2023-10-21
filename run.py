@@ -31,19 +31,29 @@ def initial_screen():
     header()
     print("Welcome to the CosmoCompatibility Zodiac Traits Test!\nThis program will calculate the percentage of traits you share in common with your zodiac sign.")
 
+def menu():
+    print("\nChoose one of the following options:")
+    print("1: Would you like more information about what zodiac signs are?")
+    print("2: Do you want to start the test?")
+    print("3: Exit the program")
+
+    while True:
+        option = int(input("\nPlease enter one of the options: "))
+        if option in [1, 2, 3]:
+            return option
+
+        print("Incorrect value entered. Please try again.")
 
 def main():
-    play = initial_screen()
-    if play in 'Yy':
-        while True:
-            day = int(input("Enter the day of your birth (1-31): "))
-            month = int(input("Enter the month of your birth (1-12): "))
+    header()
+    # TODO: add validation day e month
+    day = int(input("Enter the day of your birth (1-31): "))
+    month = int(input("Enter the month of your birth (1-12): "))
+    
+    sign = get_sign(day, month)
+    sign = sign.lower()
 
-            sign = get_sign(day, month)
-            sign = sign.lower()
-            print(f"Your zodiac sign is {sign}")
-        break
-
+    initial_screen()
 
 main()
 
