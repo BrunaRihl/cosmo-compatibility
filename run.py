@@ -1,6 +1,8 @@
 from data import data, signs
 import datetime
 import pyfiglet
+import os
+
 
 
 def get_year():
@@ -19,6 +21,7 @@ def get_sign(day, month):
     
     return "Invalid month or day"
 
+
 def header():
     font = pyfiglet.Figlet()
     message = "Cosmo * Compatibility"
@@ -27,6 +30,7 @@ def header():
 
 
 def initial_screen():
+    clear()
     header()
     print("Welcome to the CosmoCompatibility Zodiac Traits Test!\nThis program will calculate the percentage of traits you share in common with your zodiac sign.")
 
@@ -46,6 +50,7 @@ def menu():
 
 
 def about_screen():
+    clear()
     header()
     print("""Zodiac signs are part of astrology, 
     which is a belief system that suggests a connection 
@@ -56,7 +61,15 @@ def about_screen():
     print("It is believed that each sign has its own set of characteristics, strengths, weaknesses, and compatibility with other signs. Remember that astrology is a belief system and is not based on empirical scientific evidence.")
 
 
+def clear():
+    if os.name == 'nt':
+        os.system('cls')
+    else:
+        os.system('clear')
+
+
 def main():
+    clear()
     header()
     # TODO: add validation day e month
     day = int(input("Enter the day of your birth (1-31): "))
