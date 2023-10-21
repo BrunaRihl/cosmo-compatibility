@@ -27,7 +27,6 @@ def header():
 
 
 def initial_screen():
-    clear()
     header()
     print("Welcome to the CosmoCompatibility Zodiac Traits Test!\nThis program will calculate the percentage of traits you share in common with your zodiac sign.")
 
@@ -54,6 +53,17 @@ def main():
     sign = sign.lower()
 
     initial_screen()
+    play = menu()
+    while True:
+        if play == 1:
+            play = menu()
+
+        if play == 2:
+            play = menu()
+
+        if play == 3:
+            break   
+    
 
 main()
 
