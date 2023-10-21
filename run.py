@@ -30,6 +30,7 @@ def initial_screen():
     header()
     print("Welcome to the CosmoCompatibility Zodiac Traits Test!\nThis program will calculate the percentage of traits you share in common with your zodiac sign.")
 
+
 def menu():
     print("\nChoose one of the following options:")
     print("1: Would you like more information about what zodiac signs are?")
@@ -42,6 +43,18 @@ def menu():
             return option
 
         print("Incorrect value entered. Please try again.")
+
+
+def about_screen():
+    header()
+    print("""Zodiac signs are part of astrology, 
+    which is a belief system that suggests a connection 
+    between the positions and movements of celestial bodies 
+    (such as planets and stars) and events and characteristics on Earth, 
+    including human personality and behavior.""")
+    print("The zodiac is divided into twelve signs, each associated with specific dates of the year. They are: Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn, Aquarius, and Pisces.")
+    print("It is believed that each sign has its own set of characteristics, strengths, weaknesses, and compatibility with other signs. Remember that astrology is a belief system and is not based on empirical scientific evidence.")
+
 
 def main():
     header()
@@ -56,6 +69,7 @@ def main():
     play = menu()
     while True:
         if play == 1:
+            about_screen()
             play = menu()
 
         if play == 2:
