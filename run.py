@@ -1,7 +1,8 @@
+import random
 from data import data, signs
 import datetime
-import pyfiglet
 import os
+import pyfiglet
 
 
 def get_year():
@@ -71,6 +72,7 @@ def print_sign(zodiac_sign):
     print(f'{"Your zodiac sign is " + zodiac_sign.upper():^60}')
     print("\n\n")
 
+
 def shuffle_data(s_data):
     # Shuffle the list using random.shuffle
     random.shuffle(s_data)
@@ -82,10 +84,23 @@ def shuffle_answers(answers):
     return signs[random.randint(len(signs))]
 
 
+def build_options(answers, sign):
+    show = [{sign: answers.pop(sign)}]
+    for _ in range(1,4):  
+        index = shuffle_answers(answers)
+        chosen_option = answers.pop(index)  
+        show.append({index: chosen_option})
+        
+    return show
+
+
 def test_screen(sign):
     clear()
     header()
     print_sign(sign)
+    affinity_score = 0
+    data_shuffled = shuffle_data(data)
+
 
     for num, record in enumerate(data):
         question = record["question"]
@@ -106,6 +121,12 @@ def test_screen(sign):
         clear()
         header()
         print_sign(sign)
+
+        # "Correct" or "Incorrect"
+        if list(answer.keys())[0] == sign:
+            affinity_score += 1
+        
+    return affinity_score
 
 
 def main():
@@ -131,7 +152,7 @@ def main():
 
         if play == 3:
             break   
-    
+
 
 main()
 
