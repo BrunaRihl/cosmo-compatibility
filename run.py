@@ -81,14 +81,14 @@ def shuffle_data(s_data):
 
 def shuffle_answers(answers):
     signs = list(answers.keys())
-    return signs[random.randint(len(signs))]
+    return signs[random.randint(1, len(signs)-1)]
 
 
 def build_options(answers, sign):
     show = [{sign: answers.pop(sign)}]
     for _ in range(1,4):  
         index = shuffle_answers(answers)
-        chosen_option = answers.pop(index)  
+        chosen_option = answers.pop(index)
         show.append({index: chosen_option})
         
     return show
@@ -102,7 +102,7 @@ def test_screen(sign):
     data_shuffled = shuffle_data(data)
 
 
-    for num, record in enumerate(data):
+    for num, record in enumerate(data_shuffled):
         question = record["question"]
         all_options = record["answer"]
         options = build_options(all_options.copy(), sign)
@@ -110,13 +110,13 @@ def test_screen(sign):
         
         # to assemble the question
         print(f"\n\n{question}")  
-        for n, option in enumerate(shuffled_options):
+        for n, option in enumerate(shuffled_options, 1):
             answer = list(option.values())[0]
             print(f"{n}: {answer}")
 
         # The user's input/response   
         answer = int(input("\nEnter an answer: "))
-        answer = options[answer]
+        answer = options[answer - 1]
 
         clear()
         header()
@@ -141,6 +141,7 @@ def main():
 
     initial_screen()
     play = menu()
+
     while True:
         if play == 1:
             about_screen()
