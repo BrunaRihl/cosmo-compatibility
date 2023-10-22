@@ -67,6 +67,14 @@ def clear():
     else:
         os.system('clear')
 
+def test_screen(sign):
+    clear()
+    header()
+        for num, record in enumerate(data):
+        question = record["question"]
+        all_options = record["answer"]
+        options = build_options(all_options.copy(), sign)
+
 
 def main():
     clear()
