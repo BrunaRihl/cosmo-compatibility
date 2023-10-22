@@ -4,7 +4,6 @@ import pyfiglet
 import os
 
 
-
 def get_year():
     # solution to use datetime independent of the current year
     return 2023
@@ -67,9 +66,20 @@ def clear():
     else:
         os.system('clear')
 
+
 def print_sign(zodiac_sign):
     print(f'{"Your zodiac sign is " + zodiac_sign.upper():^60}')
     print("\n\n")
+
+def shuffle_data(s_data):
+    # Shuffle the list using random.shuffle
+    random.shuffle(s_data)
+    return s_data
+
+
+def shuffle_answers(answers):
+    signs = list(answers.keys())
+    return signs[random.randint(len(signs))]
 
 
 def test_screen(sign):
@@ -77,7 +87,7 @@ def test_screen(sign):
     header()
     print_sign(sign)
 
-        for num, record in enumerate(data):
+    for num, record in enumerate(data):
         question = record["question"]
         all_options = record["answer"]
         options = build_options(all_options.copy(), sign)
@@ -101,6 +111,7 @@ def main():
             play = menu()
 
         if play == 2:
+            test_screen(sign)
             play = menu()
 
         if play == 3:
