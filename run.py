@@ -91,6 +91,21 @@ def test_screen(sign):
         question = record["question"]
         all_options = record["answer"]
         options = build_options(all_options.copy(), sign)
+        shuffled_options = shuffle_data(options)
+        
+        # to assemble the question
+        print(f"\n\n{question}")  
+        for n, option in enumerate(shuffled_options):
+            answer = list(option.values())[0]
+            print(f"{n}: {answer}")
+
+        # The user's input/response   
+        answer = int(input("\nEnter an answer: "))
+        answer = options[answer]
+
+        clear()
+        header()
+        print_sign(sign)
 
 
 def main():
