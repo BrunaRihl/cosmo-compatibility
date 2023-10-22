@@ -67,9 +67,16 @@ def clear():
     else:
         os.system('clear')
 
+def print_sign(zodiac_sign):
+    print(f'{"Your zodiac sign is " + zodiac_sign.upper():^60}')
+    print("\n\n")
+
+
 def test_screen(sign):
     clear()
     header()
+    print_sign(sign)
+
         for num, record in enumerate(data):
         question = record["question"]
         all_options = record["answer"]
