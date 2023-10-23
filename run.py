@@ -72,14 +72,18 @@ def menu():
     print("\nChoose one of the following options:")
     print("1: Would you like more information about what zodiac signs are?")
     print("2: Do you want to start the test?")
-    print("3: Exit the program")
+    print("3: Exit program")
 
     while True:
-        option = int(input("\nPlease enter one of the options: "))
-        if option in [1, 2, 3]:
-            return option
+        try:
+            option = int(input("\nPlease enter one of the options: "))
+            if option in [1, 2, 3]:
+                return option
+            print(f"Invalid option. Please choose between 1 and 3.")
+        except ValueError:
+            print(f"Invalid option. Please choose between 1 and 3.")
 
-        print("Incorrect value entered. Please try again.")
+            continue
 
 
 def about_screen():
@@ -193,9 +197,17 @@ def test_screen(sign):
                 print(f"{n}: {answer}")
 
             # The user's input/response   
-            answer = int(input("\nEnter an answer: "))
-            answer = options[answer - 1]
-
+            while True:
+                try:     
+                    answer = int(input("\nEnter an answer: "))
+                    answer = options[answer - 1]
+                except IndexError:
+                    print('invalid option. Try between 1 and 4')
+                    continue
+                except ValueError:
+                    print('invalid option. Try between 1 and 4')
+                    continue
+                break
             clear()
             header()
             print_sign(sign)
@@ -236,8 +248,19 @@ def main():
     clear()
     header()
     # TODO: add validation day and month
-    day = int(input("Enter the day of your birth (1-31): "))
-    month = int(input("Enter the month of your birth (1-12): "))
+    while True:
+        try:   
+            month = int(input("Enter the month of your birth (1-12): "))
+            day = int(input("Enter the day of your birth (1-31): "))
+
+            if month == 2 and day == 29:
+                day = 28
+            datetime.date(get_year(), month, day)
+        except ValueError:
+            print("Invalid data. Please try again.")
+            continue
+
+        break
     
     sign = get_sign(day, month)
     sign = sign.lower()
