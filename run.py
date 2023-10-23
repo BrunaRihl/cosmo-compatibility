@@ -1,5 +1,5 @@
 import random
-from data import data, signs
+from data import data, signs, sign_description
 import datetime
 import os
 import pyfiglet
@@ -52,13 +52,23 @@ def menu():
 def about_screen():
     clear()
     header()
-    print("""Zodiac signs are part of astrology, 
+    print("""
+    Zodiac signs are part of astrology, 
     which is a belief system that suggests a connection 
     between the positions and movements of celestial bodies 
     (such as planets and stars) and events and characteristics on Earth, 
-    including human personality and behavior.""")
-    print("The zodiac is divided into twelve signs, each associated with specific dates of the year. They are: Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn, Aquarius, and Pisces.")
-    print("It is believed that each sign has its own set of characteristics, strengths, weaknesses, and compatibility with other signs. Remember that astrology is a belief system and is not based on empirical scientific evidence.")
+    including human personality and behavior.
+    """)
+    print("""
+    The zodiac is divided into twelve signs, each associated with specific 
+    dates of the year. They are: Aries, Taurus, Gemini, Cancer, Leo, Virgo, 
+    Libra, Scorpio, Sagittarius, Capricorn, Aquarius, and Pisces.
+    """)
+    print("""
+    It is believed that each sign has its own set of characteristics, strengths, 
+    weaknesses, and compatibility with other signs. Remember that astrology is 
+    a belief system and is not based on empirical scientific evidence.
+    """)
 
 
 def clear():
@@ -131,6 +141,13 @@ def test_screen(sign):
 
 def result_screen(sign, result):
     print(f"\n\n{result=}")
+    print(f"\n\n{sign_description[sign]}")
+    print("""
+    Remember, a persons personality is influenced by a variety
+    of factors beyond their sun sign, such as the positions of other planets 
+    in their birth chart.This test was created for fun and entertainment, 
+    not as an exact science. The traits associated with each sign are generalizations. 
+    Enjoy it in a relaxed manner!""")
  
 
 def main():
@@ -159,5 +176,4 @@ def main():
             break   
          
 main()
-
 
