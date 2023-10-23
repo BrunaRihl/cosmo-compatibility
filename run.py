@@ -8,11 +8,23 @@ from tqdm import tqdm
 
 
 def get_year():
-    # solution to use datetime independent of the current year
+    """
+    Returns the year for calculations.
+    This function provides a way to use the datetime module independently of the
+    system's actual year.
+    """
     return 2023
 
 
 def get_sign(day, month):
+    """
+    Determines the zodiac sign based on the provided day and month.
+    Args:
+        day (int): The day of birth.
+        month (int): The month of birth.
+    Returns the zodiac sign associated with the date, or "Invalid month or day"
+    if the input is invalid.
+    """
     year = get_year()
     birthday = datetime.date(year, month, day)
     
@@ -25,6 +37,10 @@ def get_sign(day, month):
 
 
 def header():
+    """
+    This function uses the pyfiglet module to create an artistic text header
+    for the program and prints the program's header.
+    """
     font = pyfiglet.Figlet()
     message = "Cosmo * Compatibility"
     rendered_message = font.renderText(message)
@@ -32,6 +48,11 @@ def header():
 
 
 def initial_screen():
+    """
+    Displays the initial screen with program introduction.
+    Clears the screen, displays the program header, and provides
+    a welcome message along with an introduction to the purpose of the program.
+    """
     clear()
     header()
     print("""
@@ -41,6 +62,13 @@ def initial_screen():
 
 
 def menu():
+    """
+    ***add validation***
+    Displays the menu and prompts the user to choose an option.
+
+    Returns the selected option (1, 2, or 3).
+    """
+
     print("\nChoose one of the following options:")
     print("1: Would you like more information about what zodiac signs are?")
     print("2: Do you want to start the test?")
@@ -55,6 +83,11 @@ def menu():
 
 
 def about_screen():
+    """
+    Clears the screen, displays the program header, and displays 
+    information about zodiac signs.
+    """
+
     clear()
     header()
     print("""
@@ -71,6 +104,11 @@ def about_screen():
 
 
 def clear():
+    """
+    This function checks the operating system and uses the appropriate command
+    to clears the terminal screen.
+    """
+
     if os.name == 'nt':
         os.system('cls')
     else:
@@ -78,22 +116,45 @@ def clear():
 
 
 def print_sign(zodiac_sign):
+    """
+    Prints the user's zodiac sign.
+    Args:
+        zodiac_sign (str): The user's zodiac sign.
+    """
     print(f'{"Your zodiac sign is " + zodiac_sign.upper():^60}')
     print("\n\n")
 
 
 def shuffle_data(s_data):
-    # Shuffle the list using random.shuffle
+    """
+    Shuffles a list of data.
+    Args:
+        s_data (list): The data to be shuffled.
+    Returns list: The shuffled data.
+    """
     random.shuffle(s_data)
     return s_data
 
 
 def shuffle_answers(answers):
+    """
+    Randomly selects a zodiac sign from a dictionary of answers.
+    Args:
+        answers (dict): A dictionary of zodiac signs and their corresponding answers.
+    Returns str: A randomly selected zodiac sign.
+    """
     signs = list(answers.keys())
     return signs[random.randint(1, len(signs)-1)]
 
 
 def build_options(answers, sign):
+    """
+    Builds a list of options for a zodiac sign.
+    Args:
+        answers (dict): A dictionary of zodiac signs and their corresponding answers.
+        sign (str): The zodiac sign for which options are being built.
+    Returns a list of options, including the correct answer.
+    """
     show = [{sign: answers.pop(sign)}]
     for _ in range(1,4):  
         index = shuffle_answers(answers)
@@ -104,6 +165,14 @@ def build_options(answers, sign):
 
 
 def test_screen(sign):
+    """    
+    Conducts the Zodiac Traits Test for a specific zodiac sign.
+    This function initiates the test, presents questions and options to the user, 
+    evaluates the user's responses, and calculates an affinity score based on correct 
+    answers. It also displays a progress bar to track the affinity test progress.
+    Args:
+        sign (str): The zodiac sign for which the test is conducted (user zodiac sign).
+    """
     clear()
     header()
     print_sign(sign)
@@ -117,7 +186,7 @@ def test_screen(sign):
             options = build_options(all_options.copy(), sign)
             shuffled_options = shuffle_data(options)
             
-            # to assemble the question
+            # To assemble the question
             print(f"\n\n{question}")  
             for n, option in enumerate(shuffled_options, 1):
                 answer = list(option.values())[0]
@@ -143,6 +212,13 @@ def test_screen(sign):
 
 
 def result_screen(sign, result):
+    """
+    Displays the zodiac sign description and result.
+    Args:
+        sign (str): The zodiac sign of the user.
+        result (int): The affinity score indicating the number of correct answers.
+    """
+
     print(f"\n{sign_description[sign]}")
     print("""
     Remember, a persons personality is influenced by a variety
@@ -153,6 +229,10 @@ def result_screen(sign, result):
  
 
 def main():
+    """
+    Prompts the user for their birthdate and conducts the test.
+    Runs the main program logic for the Zodiac Traits Test.
+    """
     clear()
     header()
     # TODO: add validation day and month
@@ -163,7 +243,7 @@ def main():
     sign = sign.lower()
 
     initial_screen()
-    print(f"\n\nYour zodiac sign is {sign.upper()}")
+    print_sign(sign)
 
     play = menu()
     while True:
