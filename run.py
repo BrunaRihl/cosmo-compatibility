@@ -34,7 +34,10 @@ def header():
 def initial_screen():
     clear()
     header()
-    print("Welcome to the CosmoCompatibility Zodiac Traits Test!\nThis program will calculate the percentage of traits you share in common with your zodiac sign.")
+    print("""
+    Welcome to the CosmoCompatibility Zodiac Traits Test!
+    This program will calculate the percentage of traits you share in common with your zodiac sign.
+    """)
 
 
 def menu():
@@ -55,21 +58,15 @@ def about_screen():
     clear()
     header()
     print("""
-    Zodiac signs are part of astrology, 
-    which is a belief system that suggests a connection 
-    between the positions and movements of celestial bodies 
-    (such as planets and stars) and events and characteristics on Earth, 
-    including human personality and behavior.
-    """)
-    print("""
-    The zodiac is divided into twelve signs, each associated with specific 
-    dates of the year. They are: Aries, Taurus, Gemini, Cancer, Leo, Virgo, 
-    Libra, Scorpio, Sagittarius, Capricorn, Aquarius, and Pisces.
-    """)
-    print("""
-    It is believed that each sign has its own set of characteristics, strengths, 
-    weaknesses, and compatibility with other signs. Remember that astrology is 
-    a belief system and is not based on empirical scientific evidence.
+    Zodiac signs are part of astrology, which is a belief system that suggests a connection 
+    between the positions and movements of celestial bodies (such as planets and stars) and
+    events and characteristics on Earth, including human personality and behavior.\n
+    The zodiac is divided into twelve signs, each associated with specific dates of the year. 
+    They are: Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn,
+    Aquarius, and Pisces.\n
+    It is believed that each sign has its own set of characteristics, strengths, weaknesses, and 
+    compatibility with other signs. Remember that astrology is a belief system and is not based 
+    on empirical scientific evidence.
     """)
 
 
@@ -146,8 +143,7 @@ def test_screen(sign):
 
 
 def result_screen(sign, result):
-    print(f"\n\n{result=}")
-    print(f"\n\n{sign_description[sign]}")
+    print(f"\n{sign_description[sign]}")
     print("""
     Remember, a persons personality is influenced by a variety
     of factors beyond their sun sign, such as the positions of other planets 
@@ -167,6 +163,8 @@ def main():
     sign = sign.lower()
 
     initial_screen()
+    print(f"\n\nYour zodiac sign is {sign.upper()}")
+
     play = menu()
     while True:
         if play == 1:
