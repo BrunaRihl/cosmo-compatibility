@@ -3,6 +3,8 @@ from data import data, signs, sign_description
 import datetime
 import os
 import pyfiglet
+from tqdm import tqdm
+
 
 
 def get_year():
@@ -111,32 +113,36 @@ def test_screen(sign):
     affinity_score = 0
     data_shuffled = shuffle_data(data)
 
+    with tqdm(total=len(data_shuffled), ncols=60, bar_format='Compatibility:|{bar}|{percentage:3.0f}%') as pbar:
+        for num, record in enumerate(data_shuffled):
+            question = record["question"]
+            all_options = record["answer"]
+            options = build_options(all_options.copy(), sign)
+            shuffled_options = shuffle_data(options)
+            
+            # to assemble the question
+            print(f"\n\n{question}")  
+            for n, option in enumerate(shuffled_options, 1):
+                answer = list(option.values())[0]
+                print(f"{n}: {answer}")
 
-    for num, record in enumerate(data_shuffled):
-        question = record["question"]
-        all_options = record["answer"]
-        options = build_options(all_options.copy(), sign)
-        shuffled_options = shuffle_data(options)
-        
-        # to assemble the question
-        print(f"\n\n{question}")  
-        for n, option in enumerate(shuffled_options, 1):
-            answer = list(option.values())[0]
-            print(f"{n}: {answer}")
+            # The user's input/response   
+            answer = int(input("\nEnter an answer: "))
+            answer = options[answer - 1]
 
-        # The user's input/response   
-        answer = int(input("\nEnter an answer: "))
-        answer = options[answer - 1]
+            clear()
+            header()
+            print_sign(sign)
 
-        clear()
-        header()
-        print_sign(sign)
+            # "Correct" or "Incorrect"
+            if list(answer.keys())[0] == sign:
+                affinity_score += 1
+                pbar.update(1)
+            
+            pbar.set_postfix(current=num + 1)
 
-        # "Correct" or "Incorrect"
-        if list(answer.keys())[0] == sign:
-            affinity_score += 1
-        
-    return affinity_score
+            
+        return affinity_score
 
 
 def result_screen(sign, result):
