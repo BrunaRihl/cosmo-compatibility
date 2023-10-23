@@ -129,10 +129,14 @@ def test_screen(sign):
     return affinity_score
 
 
+def result_screen(sign, result):
+    print(f"\n\n{result=}")
+ 
+
 def main():
     clear()
     header()
-    # TODO: add validation day e month
+    # TODO: add validation day and month
     day = int(input("Enter the day of your birth (1-31): "))
     month = int(input("Enter the month of your birth (1-12): "))
     
@@ -141,20 +145,19 @@ def main():
 
     initial_screen()
     play = menu()
-
     while True:
         if play == 1:
             about_screen()
             play = menu()
 
         if play == 2:
-            test_screen(sign)
+            result = test_screen(sign)
+            result_screen(sign, result)
             play = menu()
 
         if play == 3:
             break   
-
-
+         
 main()
 
 
