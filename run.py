@@ -247,7 +247,6 @@ def main():
     """
     clear()
     header()
-    # TODO: add validation day and month
     while True:
         try:   
             month = int(input("Enter the month of your birth (1-12): "))

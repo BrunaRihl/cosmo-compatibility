@@ -86,9 +86,145 @@ data = [
             "aquarius": "Finding innovative ways to deal with emotions and seeking independence.",
             "pisces": "Surrendering to emotions and seeking creative ways to deal with them."
         }
+    },
+    {
+        "question": "Choose the option that best describes your approach to life?",
+        "answer": {
+            "aries": "Entrepreneurial",
+            "taurus": "Balanced",
+            "gemini": "Communicative",
+            "cancer": "Sensitive",
+            "libra": "Social",
+            "leo": "Charismatic",
+            "virgo": "Analytical",
+            "scorpio": "Courageous",
+            "sagittarius": "Spontaneous",
+            "capricorn": "Practical",
+            "aquarius": "Innovative",
+            "pisces": "Creative"
+        }
+    },
+    {
+        "question": "Choose the word that best describes your communication style:",
+        "answer": {
+            "aries": "Direct",
+            "taurus": "Calm",
+            "gemini": "Expressive",
+            "cancer": "Empathetic",
+            "leo": "Assertive",
+            "virgo": "Logical",
+            "libra": "Diplomatic",
+            "scorpio": "Profound",
+            "sagittarius": "Enthusiastic",
+            "capricorn": "Practical",
+            "aquarius": "Innovative",
+            "pisces": "Sensitive"
+        }
+    },
+    {
+        "question": "Which of these activities do you prefer to do in your free time?",
+        "answer": {
+            "aries": "Practice a sport",
+            "taurus": "Read a book",
+            "gemini": "Attend social events",
+            "cancer": "Explore a new place",
+            "leo": "Create something new",
+            "virgo": "Work on personal projects",
+            "libra": "Try new things",
+            "scorpio": "Investigate interesting topics",
+            "sagittarius": "Go on an adventure",
+            "capricorn": "Work on personal projects",
+            "aquarius": "Try new things",
+            "pisces": "Meditate or reflect"
+        }
+    },
+    {
+        "question": "Choose the option that best aligns with your relationship preferences:",
+        "answer": {
+            "aries": "Passionate and intense",
+            "taurus": "Stable and loyal",
+            "gemini": "Communicative and curious",
+            "cancer": "Deep and intense",
+            "leo": "Social and outgoing",
+            "virgo": "Balanced and fair",
+            "libra": "Harmonious and cooperative",
+            "scorpio": "Intense and passionate",
+            "sagittarius": "Open to new ideas",
+            "capricorn": "Stable and loyal",
+            "aquarius": "Innovative and independent",
+            "pisces": "Empathetic and sensitive"
+        }
+    },
+    {
+        "question": "How do you deal with unexpected changes?",
+        "answer": {
+            "aries": "Adapt quickly and embrace the change.",
+            "taurus": "Take time to assess the situation and then make adjustments.",
+            "gemini": "Appreciate the novelty and seek to understand all possibilities.",
+            "cancer": "Get emotionally shaken, but find support to deal with it.",
+            "leo": "Face the change with confidence and determination.",
+            "virgo": "Analyze details and create a plan to handle the change.",
+            "libra": "Seek balance and find ways to handle the change harmoniously.",
+            "scorpio": "Delve into the reasons behind the change and adapt with intensity.",
+            "sagittarius": "Face the change as a new adventure and seize the opportunity.",
+            "capricorn": "Stay calm and seek a practical approach to handle the change.",
+            "aquarius": "See the change as an opportunity for growth and innovation.",
+            "pisces": "Feel the change deeply and seek ways to emotionally connect with it."
+        }
+    },
+    {
+        "question": "How do you approach challenges in teamwork?",
+        "answer": {
+            "aries": "Take the lead and take immediate action.",
+            "taurus": "Contribute with my experience and stability.",
+            "gemini": "Exchange ideas and collaborate with different perspectives.",
+            "cancer": "Focus on creating an environment of emotional support.",
+            "leo": "Inspire and encourage the group to achieve ambitious goals.",
+            "virgo": "Pay attention to details and organize tasks.",
+            "libra": "Seek to balance opinions and find consensus solutions.",
+            "scorpio": "Dive deep into issues and seek solutions intensely.",
+            "sagittarius": "Bring enthusiasm and long-term perspective.",
+            "capricorn": "Offer a practical and methodical approach.",
+            "aquarius": "Introduce innovation and new ways of doing things.",
+            "pisces": "Contribute with sensitivity and empathy to the group."
+        }
+    },
+    {
+        "question": "How do you handle pressure?",
+        "answer": {
+            "aries": "Harness the adrenaline and focus on meeting deadlines.",
+            "taurus": "Remain calm and work consistently.",
+            "gemini": "Break the work into stages and maintain agility.",
+            "cancer": "Seek emotional support and carefully organize my time.",
+            "leo": "See pressure as an opportunity to showcase my ability.",
+            "virgo": "Meticulously organize my time and resources.",
+            "libra": "Seek to balance quality with efficiency.",
+            "scorpio": "Concentrate intensely and face challenges head-on.",
+            "sagittarius": "Maintain a positive attitude and focus on problem-solving.",
+            "capricorn": "Plan strategically and keep my focus on the goal.",
+            "aquarius": "Introduce innovation and new approaches to deal with pressure.",
+            "pisces": "Trust my intuition and find creative ways to handle the situation."
+        }
+    },
+    {
+        "question": "How do you usually motivate yourself to face challenges in your daily life?",
+        "answer": {
+            "aries": "Find motivation in competition and the pursuit of surpassing limits.",
+            "taurus": "Motivation comes from stability and achieving personal goals.",
+            "gemini": "Seek motivation in the variety of experiences and learning opportunities.",
+            "cancer": "Motivation arises from the desire to create an emotionally secure environment.",
+            "leo": "Am motivated by the opportunity to shine and be recognized.",
+            "virgo": "Find motivation in the pursuit of perfection and efficiency.",
+            "libra": "Motivation comes from seeking balance and harmony.",
+            "scorpio": "Find motivation in seeking depth and transformation.",
+            "sagittarius": "Am motivated by the quest for adventure and personal growth.",
+            "capricorn": "Motivation arises from the pursuit of long-term goals.",
+            "aquarius": "Find motivation in innovation and the pursuit of new ideas.",
+            "pisces": "Motivation comes from emotional connection and empathy with others."
+        }
     }
-
 ]
+
 
 sign_description = {
     "aries": """
