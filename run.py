@@ -230,14 +230,16 @@ def result_screen(sign, result):
         sign (str): The zodiac sign of the user.
         result (int): The affinity score indicating the number of correct answers.
     """
-
-    print(f"\n{sign_description[sign]}")
     print("""
+    Test complete!  This is your final result! \n    Thank you for completing the compatibility test!
+
     Remember, a persons personality is influenced by a variety
     of factors beyond their sun sign, such as the positions of other planets 
     in their birth chart.This test was created for fun and entertainment, 
     not as an exact science. The traits associated with each sign are generalizations. 
-    Enjoy it in a relaxed manner!""")
+    Enjoy it in a relaxed manner!\n""")
+
+    print(f"    A brief description about your zodiac sign:{sign_description[sign]}")
  
 
 def main():
@@ -247,26 +249,7 @@ def main():
     """
     clear()
     header()
-    while True:
-        try:   
-            month = int(input("Enter the month of your birth (1-12): "))
-            day = int(input("Enter the day of your birth (1-31): "))
-
-            if month == 2 and day == 29:
-                day = 28
-            datetime.date(get_year(), month, day)
-        except ValueError:
-            print("Invalid data. Please try again.")
-            continue
-
-        break
-    
-    sign = get_sign(day, month)
-    sign = sign.lower()
-
     initial_screen()
-    print_sign(sign)
-
     play = menu()
     while True:
         if play == 1:
@@ -274,11 +257,34 @@ def main():
             play = menu()
 
         if play == 2:
+            clear()
+            header()
+
+            while True:
+                try:   
+                    month = int(input("Enter the month of your birth (1-12): "))
+                    day = int(input("Enter the day of your birth (1-31): "))
+
+                    if month == 2 and day == 29:
+                        day = 28
+                    datetime.date(get_year(), month, day)
+                except ValueError:
+                    print("Invalid data. Please try again.")
+                    continue
+
+                break
+            sign = get_sign(day, month)
+            sign = sign.lower()
+            print_sign(sign)
             result = test_screen(sign)
             result_screen(sign, result)
             play = menu()
 
         if play == 3:
+            clear()
+            header()
+            print("\nThank you for exploring CosmoCompatibility!")
+            print("Have a great day and see you next time!\n")
             break   
          
 main()
