@@ -1,32 +1,37 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# CosmoCompatibility
 
-Welcome,
+Cosmo Compatibility test is a Python application that provides a personalized testing experience based on astrological signs. The program was designed to offer users a journey of knowledge and entertainment, allowing exploration of the distinctive characteristics associated with the zodiac signs.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+![CosmoCompatibility shown on a range of devices](/assets/images/docs/)  
 
-## Reminders
+## Demo
+The live demo is available [here]()!
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+## Contents
 
-## Creating the Heroku app
+* [User Experience](#user-experience)
+  * [Program Overview](#program-overview)
+  * [User base](#user-base)
+  * [Project Goals](#project-goals)
+  * [Program Flowchart](#wireframes)
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+* [Features](#features)
+  * [General Features on Page](#features)
+  * [Features and resources to be added in the future](#features-and-resources-to-be-added-in-the-future)
 
-1. `heroku/python`
-2. `heroku/nodejs`
+* [Testing](#testing)
+  * [Manual Testing](#manual-testing)
+  * [Validator Testing](#validator-testing)
+  * [Bugs](#bugs)
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+* [Technologies Used](#technologies-used)
+  * [Languages Used](#languages-used)
+  * [Python Packages Used](#frameworks-libraries--programs-used)
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+* [Deployment](#deployment)
 
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
----
-
-Happy coding!
+* [Credits](#credits)
+  * [Code](#code)
+  * [Content](#content)
+  * [Media](#media)
+  * [Acknowledgments](#acknowledgments)

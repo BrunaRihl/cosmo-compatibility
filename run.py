@@ -6,7 +6,6 @@ import pyfiglet
 from tqdm import tqdm
 
 
-
 def get_year():
     """
     Returns the year for calculations.
@@ -70,8 +69,8 @@ def menu():
     """
 
     print("\nChoose one of the following options:")
-    print("1: Would you like more information about what zodiac signs are?")
-    print("2: Do you want to start the test?")
+    print("1: More information about what zodiac signs are")
+    print("2: Start the test")
     print("3: Exit program")
 
     while True:

@@ -51,7 +51,7 @@ signs = {
     },
 }
 
-
+#comments
 data = [
     {
         "question": "What is your greatest attribute?",
@@ -225,7 +225,7 @@ data = [
     }
 ]
 
-
+#comments
 sign_description = {
     "aries": """
     Aries (March 21 - April 19):
