@@ -83,7 +83,8 @@ def menu():
         try:
             option = int(input("\nPlease enter one of the options: "))
             if option in [1, 2, 3]:
-                return option
+                return choose_screen(option)
+
             print(f"Invalid option. Please choose between 1 and 3.")
         except ValueError:
             print(f"Invalid option. Please choose between 1 and 3.")
@@ -254,21 +255,12 @@ def result_screen(sign, result):
     print(f"    A brief description about your zodiac sign:{sign_description[sign]}")
  
 
-def main():
-    """
-    Prompts the user for their birthdate and conducts the test.
-    Runs the main program logic for the Zodiac Traits Test.
-    """
-    clear()
-    header()
-    initial_screen()
-    play = menu()
-    while True:
-        if play == 1:
+def choose_screen(menu_id):
+    match menu_id:
+        case 1:
             about_screen()
-            play = menu()
 
-        if play == 2:
+        case 2:
             clear()
             header()
 
@@ -285,19 +277,36 @@ def main():
                     continue
 
                 break
+
             sign = get_sign(day, month)
             sign = sign.lower()
             print_sign(sign)
             result = test_screen(sign)
             result_screen(sign, result)
-            play = menu()
 
-        if play == 3:
+        case 3:
             clear()
             header()
             print("\nThank you for exploring CosmoCompatibility!")
             print("Have a great day and see you next time!\n")
-            break   
-         
+
+
+    return menu_id
+
+
+def main():
+    """
+    Prompts the user for their birthdate and conducts the test.
+    Runs the main program logic for the Zodiac Traits Test.
+    """
+    clear()
+    header()
+    initial_screen()
+
+    while True:
+        result = menu()
+        if result == 3:
+            break
+  
 main()
 
