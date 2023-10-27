@@ -1,1 +1,4 @@
-# Your requirements go here
+python-dateutil
+tqdm
+pyfiglet
+google-auth

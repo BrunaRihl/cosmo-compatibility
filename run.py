@@ -1,9 +1,12 @@
 import random
-from data import data, signs, sign_description
 import datetime
 import os
+
+from dateutil.relativedelta import relativedelta
 import pyfiglet
 from tqdm import tqdm
+
+from data import data, signs, sign_description
 
 
 def get_year():
@@ -29,6 +32,9 @@ def get_sign(day, month):
     
     for sign in signs:
         period = signs[sign]
+        if period["start"].month > period["end"].month:
+            period["end"] = period["end"] + relativedelta(years=1) 
+    
         if period["start"] <= birthday <= period["end"]:
             return sign
     
