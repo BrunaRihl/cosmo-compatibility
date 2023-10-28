@@ -2,3 +2,6 @@ python-dateutil
 tqdm
 pyfiglet
 google-auth
+gspread
+google-auth-oauthlib
+google-auth-httplib2
