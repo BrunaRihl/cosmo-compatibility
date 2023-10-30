@@ -72,10 +72,7 @@ def initial_screen():
 
 def menu():
     """
-    ***add validation***
     Displays the menu and prompts the user to choose an option.
-
-    Returns the selected option (1, 2, or 3).
     """
 
     print("\nChoose one of the following options:")
@@ -246,6 +243,7 @@ def result_screen(sign, result):
         sign (str): The zodiac sign of the user.
         result (int): The affinity score indicating the number of correct answers.
     """
+    
     print("""
     Test complete!  This is your final result! \n    Thank you for completing the compatibility test!
 
@@ -265,6 +263,14 @@ def result_screen(sign, result):
 
 
 def draw_progressbar(worksheet):
+    """
+    Draws a progress bar for visualizing data from the given worksheet.
+    This function takes a worksheet as input and visualizes progress data using a progress bar.
+    Each zodiac sign is aligned uniformly within the progress bar by adding spaces at the end.
+    Args:
+        worksheet (list): A list of rows containing data to be visualized.
+    """
+
     format = ':|{bar}|{percentage:3.0f}%'
     word_len_max = 15
     for num, row in enumerate(worksheet):
@@ -283,6 +289,12 @@ def draw_progressbar(worksheet):
  
 
 def choose_screen(menu_id):
+    """
+    Takes a menu choice and executes the corresponding action.
+    Args:
+        menu_id (int): The ID of the chosen menu option.
+    Returns: int: The menu option chosen.
+    """
     match menu_id:
         case 1:
             about_screen()
