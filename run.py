@@ -65,7 +65,7 @@ def header():
 ▒█▄▄█ ▀▀▀▀ ▀░░░▀ █▀▀▀ ▀░░▀ ░░▀░░ ▀▀▀ ▀▀▀░ ▀▀▀ ▀▀▀ ▀▀▀ ░░▀░░ ▄▄▄█ 
 """
 
-    print(hangmetal)
+    print(cosmo_message)
 
 
 def initial_screen():
