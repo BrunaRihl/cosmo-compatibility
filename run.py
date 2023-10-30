@@ -11,7 +11,7 @@ try:
     from auth import update_worksheet
 except Exception as e:
     print("Unable to connect to the internet: ", e)
-  
+
 
 def get_year():
     """
@@ -135,12 +135,14 @@ def print_sign(zodiac_sign):
     print(f'{"Your zodiac sign is " + zodiac_sign.upper():^60}')
     print("\n\n")
 
+
 def print_instructions():
     print("Instructions:")
     print("Choose the option that best aligns with your personality.")
     print("If your choice matches the personality description of your zodiac sign,")
     print("the compatibility progress bar will increase")
     print("There are four options (1, 2, 3, 4). Type your choice and press 'Enter'\n")
+
 
 def shuffle_data(s_data):
     """
@@ -346,5 +348,4 @@ def main():
             break
   
 main()
-
 
