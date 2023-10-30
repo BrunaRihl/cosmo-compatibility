@@ -3,7 +3,6 @@ import datetime
 import os
 
 from dateutil.relativedelta import relativedelta
-import pyfiglet
 from tqdm import tqdm
 
 from data import data, signs, sign_description
@@ -44,13 +43,6 @@ def get_sign(day, month):
     
     return "Invalid month or day"
 
-"""def header():
-    This function uses the pyfiglet module to create an artistic text header
-    for the program and prints the program's header.
-    font = pyfiglet.Figlet()
-    message = "Cosmo * Compatibility"
-    rendered_message = font.renderText(message)
-    print(rendered_message)"""
 
 def header():
     """
@@ -258,11 +250,11 @@ def result_screen(sign, result):
     print("""
     Test complete!  This is your final result! \n    Thank you for completing the compatibility test!
 
-    Remember, a persons personality is influenced by a variety
-    of factors beyond their sun sign, such as the positions of other planets 
-    in their birth chart.This test was created for fun and entertainment, 
-    not as an exact science. The traits associated with each sign are generalizations. 
-    Enjoy it in a relaxed manner!\n""")
+Remember, a persons personality is influenced by a variety
+of factors beyond their sun sign, such as the positions of other planets 
+in their birth chart.This test was created for fun and entertainment, 
+not as an exact science. The traits associated with each sign are generalizations. 
+Enjoy it in a relaxed manner!\n""")
 
     print(f"    A brief description about your zodiac sign:{sign_description[sign]}")
 
