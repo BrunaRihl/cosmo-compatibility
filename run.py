@@ -6,8 +6,7 @@ from dateutil.relativedelta import relativedelta
 import pyfiglet
 from tqdm import tqdm
 
-from data import data, signs, sign_description
-
+from data import data, signs, sign_description  
 
 def get_year():
     """
@@ -232,7 +231,6 @@ def test_screen(sign):
             
             pbar.set_postfix(current=num + 1)
 
-            
         return affinity_score
 
 
@@ -253,7 +251,6 @@ def result_screen(sign, result):
     Enjoy it in a relaxed manner!\n""")
 
     print(f"    A brief description about your zodiac sign:{sign_description[sign]}")
- 
 
 def choose_screen(menu_id):
     match menu_id:
@@ -299,8 +296,6 @@ def main():
     Prompts the user for their birthdate and conducts the test.
     Runs the main program logic for the Zodiac Traits Test.
     """
-    clear()
-    header()
     initial_screen()
 
     while True:
