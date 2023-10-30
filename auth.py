@@ -1,6 +1,11 @@
 import gspread
 from google.oauth2.service_account import Credentials
 
+"""
+These settings are used to access the data of the CosmoCompatibility 
+test. This template was used following the example provided by 
+Code Institute.
+"""
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
@@ -16,6 +21,17 @@ TOTAL_QUESTIONS = 10
 WORKSHEET = SHEET.worksheet('sumary')
 
 def update_worksheet(sign, hits):
+    """
+    Updates the Google Sheets worksheet with compatibility test results.
+    This function takes a zodiac sign and the number of hits as input, 
+    then updates the corresponding row in the worksheet with new player and hit values. 
+    It also calculates the compatibility percentage and returns all values.
+    Args:
+        sign (str): The zodiac sign.
+        hits (int): The number of hits.
+    Returns: list: All values in the updated worksheet.
+    """
+
     cell = WORKSHEET.find(sign)
 
     # update cell player

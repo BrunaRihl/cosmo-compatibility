@@ -1,5 +1,11 @@
 from datetime import date
 
+"""
+Dictionary of zodiac sign dates.
+Each sign has a start date and an end date.
+Will be used to identify a person's zodiac sign based on the provided date of birth.
+"""
+
 signs = {
     "Aries": {
         "start": date(2023, 3, 21),
@@ -51,7 +57,13 @@ signs = {
     },
 }
 
-#comments
+
+"""
+'data' is a list of dictionaries, each containing a 'question' and its corresponding 
+'answer' options for different zodiac signs.
+This data structure is used to gather user input and provide personality insights based 
+on their zodiac sign.
+"""
 data = [
     {
         "question": "What is your greatest attribute?",
@@ -225,7 +237,14 @@ data = [
     }
 ]
 
-#comments
+
+
+"""
+'sign_description' is a dictionary containing detailed descriptions of each zodiac sign.
+Each sign's description includes information about their ruling element, characteristics, and values.
+This data structure can be used to provide users with insights into their zodiac sign's traits 
+and tendencies at the end of the test.
+"""
 sign_description = {
     "aries": """
     Aries (March 21 - April 19):
