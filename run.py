@@ -45,7 +45,7 @@ def get_sign(day, month):
     return "Invalid month or day"
 
 
-def header():
+"""def header():
     """
     This function uses the pyfiglet module to create an artistic text header
     for the program and prints the program's header.
@@ -53,7 +53,22 @@ def header():
     font = pyfiglet.Figlet()
     message = "Cosmo * Compatibility"
     rendered_message = font.renderText(message)
-    print(rendered_message)
+    print(rendered_message)"""
+
+def header():
+    """
+    ASCII art initial screen.
+    """
+    cosmo_message = """
+▒█▀▀█ █▀▀█ █▀▀ █▀▄▀█ █▀▀█ 　
+▒█░░░ █░░█ ▀▀█ █░▀░█ █░░█ 　
+▒█▄▄█ ▀▀▀▀ ▀▀▀ ▀░░░▀ ▀▀▀▀ 　 
+▒█▀▀█ █▀▀█ █▀▄▀█ █▀▀█ █▀▀█ ▀▀█▀▀ ░▀░ █▀▀▄ ░▀░ █░░ ░▀░ ▀▀█▀▀ █░░█
+▒█░░░ █░░█ █░▀░█ █░░█ █▄▄█ ░░█░░ ▀█▀ █▀▀▄ ▀█▀ █░░ ▀█▀ ░░█░░ █▄▄█
+▒█▄▄█ ▀▀▀▀ ▀░░░▀ █▀▀▀ ▀░░▀ ░░▀░░ ▀▀▀ ▀▀▀░ ▀▀▀ ▀▀▀ ▀▀▀ ░░▀░░ ▄▄▄█ 
+"""
+
+    print(hangmetal)
 
 
 def initial_screen():
@@ -64,10 +79,9 @@ def initial_screen():
     """
     clear()
     header()
-    print("""
-    Welcome to the CosmoCompatibility Zodiac Traits Test!
-    This program will calculate the percentage of traits you share in common with your zodiac sign.
-    """)
+    print("Welcome to the CosmoCompatibility Zodiac Traits Test!")
+    print("This program will calculate the percentage of traits you") 
+    print("share in common with your zodiac sign.")
 
 
 def menu():
@@ -102,15 +116,16 @@ def about_screen():
     clear()
     header()
     print("""
-    Zodiac signs are part of astrology, which is a belief system that suggests a connection 
-    between the positions and movements of celestial bodies (such as planets and stars) and
-    events and characteristics on Earth, including human personality and behavior.\n
-    The zodiac is divided into twelve signs, each associated with specific dates of the year. 
-    They are: Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn,
-    Aquarius, and Pisces.\n
-    It is believed that each sign has its own set of characteristics, strengths, weaknesses, and 
-    compatibility with other signs. Remember that astrology is a belief system and is not based 
-    on empirical scientific evidence.
+    Zodiac signs are part of astrology, which is a belief system that 
+    suggests a connection between the positions and movements of celestial
+    bodies (such as planets and stars) and events and characteristics on Earth,
+    including human personality and behavior.\n
+    The zodiac is divided into twelve signs, each associated with specific dates
+    of the year. They are: Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, 
+    Scorpio, Sagittarius, Capricorn, Aquarius, and Pisces.\n
+    It is believed that each sign has its own set of characteristics, strengths, 
+    weaknesses, and compatibility with other signs. Remember that astrology is a
+    belief system and is not based on empirical scientific evidence.
     """)
 
 
