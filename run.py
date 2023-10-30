@@ -10,7 +10,7 @@ from data import data, signs, sign_description
 try:
     from auth import update_worksheet
 except Exception as e:
-    print("Nao foi possivel conectartse a internet: ", e)
+    print("Unable to connect to the internet: ", e)
   
 
 def get_year():
@@ -257,6 +257,31 @@ def result_screen(sign, result):
 
     print(f"    A brief description about your zodiac sign:{sign_description[sign]}")
 
+    try:
+        worksheet = update_worksheet(sign, result)
+        draw_progressbar(worksheet)
+    except Exception as e:
+        print("Unable to connect to the internet: ", e)
+
+
+def draw_progressbar(worksheet):
+    format = ':|{bar}|{percentage:3.0f}%'
+    word_len_max = 15
+    for num, row in enumerate(worksheet):
+        if num == 0:
+            continue
+
+        # Added a space at the end of each sign to align them in the same space.
+        # Example:
+        # sagittarius 11 characters + 5 white space = 15
+        # aries 5 characters + 10 white space = 15
+        space = " " * (word_len_max - len(row[0]))
+        sign = row[0] + space
+
+        with tqdm(total=100, ncols=60, bar_format=sign + format) as pbar:
+            pbar.update(int(float(row[3])))
+ 
+
 def choose_screen(menu_id):
     match menu_id:
         case 1:
@@ -309,4 +334,5 @@ def main():
             break
   
 main()
+
 
