@@ -44,12 +44,9 @@ def get_sign(day, month):
     
     return "Invalid month or day"
 
-
 """def header():
-    """
     This function uses the pyfiglet module to create an artistic text header
     for the program and prints the program's header.
-    """
     font = pyfiglet.Figlet()
     message = "Cosmo * Compatibility"
     rendered_message = font.renderText(message)
