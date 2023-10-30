@@ -319,7 +319,9 @@ def choose_screen(menu_id):
 
             while True:
                 try:   
+                    print("\n"*10)
                     month = int(input("Enter the month of your birth (1-12): "))
+                    
                     day = int(input("Enter the day of your birth (1-31): "))
 
                     if month == 2 and day == 29:
