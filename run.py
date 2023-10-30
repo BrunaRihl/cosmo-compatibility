@@ -6,7 +6,12 @@ from dateutil.relativedelta import relativedelta
 import pyfiglet
 from tqdm import tqdm
 
-from data import data, signs, sign_description  
+from data import data, signs, sign_description
+try:
+    from auth import update_worksheet
+except Exception as e:
+    print("Nao foi possivel conectartse a internet: ", e)
+  
 
 def get_year():
     """
