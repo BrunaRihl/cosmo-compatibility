@@ -60,6 +60,9 @@ def header():
 ▒█▀▀█ █▀▀█ █▀▀ █▀▄▀█ █▀▀█ 　
 ▒█░░░ █░░█ ▀▀█ █░▀░█ █░░█ 　
 ▒█▄▄█ ▀▀▀▀ ▀▀▀ ▀░░░▀ ▀▀▀▀ 　 
+▒█▀▀█ █▀▀█ █▀▄▀█ █▀▀█ █▀▀█ ▀▀█▀▀ ░▀░ █▀▀▄ ░▀░ █░░ ░▀░ ▀▀█▀▀ █░░█
+▒█░░░ █░░█ █░▀░█ █░░█ █▄▄█ ░░█░░ ▀█▀ █▀▀▄ ▀█▀ █░░ ▀█▀ ░░█░░ █▄▄█
+▒█▄▄█ ▀▀▀▀ ▀░░░▀ █▀▀▀ ▀░░▀ ░░▀░░ ▀▀▀ ▀▀▀░ ▀▀▀ ▀▀▀ ▀▀▀ ░░▀░░ ▄▄▄█ 
 """
 
     print(cosmo_message)
@@ -108,7 +111,6 @@ def about_screen():
     """
 
     clear()
-    header()
     print("""
     Zodiac signs are part of astrology, which is a belief system that 
     suggests a connection between the positions and movements of celestial
@@ -202,7 +204,6 @@ def test_screen(sign):
         sign (str): The zodiac sign for which the test is conducted (user zodiac sign).
     """
     clear()
-    header()
     print_sign(sign)
     print_instructions()
     affinity_score = 0
@@ -234,7 +235,6 @@ def test_screen(sign):
                     continue
                 break
             clear()
-            header()
             print_sign(sign)
 
             # "Correct" or "Incorrect"
@@ -312,8 +312,6 @@ def choose_screen(menu_id):
 
         case 2:
             clear()
-            header()
-
             while True:
                 try:   
                     month = int(input("Enter the month of your birth (1-12): "))
@@ -336,7 +334,6 @@ def choose_screen(menu_id):
 
         case 3:
             clear()
-            header()
             print("\nThank you for exploring CosmoCompatibility!")
             print("Have a great day and see you next time!\n")
 
