@@ -78,20 +78,21 @@ def menu():
     Displays the menu and prompts the user to choose an option.
     """
 
-    print("\nChoose one of the following options:")
-    print("1: More information about what zodiac signs are")
-    print("2: Start the test")
-    print("3: Exit program")
+    print("\n--- Zodiac Compatibility Test Menu ---")
+    print("1. Learn more about Zodiac Signs")
+    print("2. Start the Compatibility Test")
+    print("3. View Compatibility Percentages")
+    print("4. Exit Program")
 
     while True:
         try:
             option = int(input("\nPlease enter one of the options: "))
-            if option in [1, 2, 3]:
+            if option in [1, 2, 3, 4]:
                 return choose_screen(option)
 
-            print(f"Invalid option. Please choose between 1 and 3.")
+            print(f"Invalid option. Please choose between 1 and 4.")
         except ValueError:
-            print(f"Invalid option. Please choose between 1 and 3.")
+            print(f"Invalid option. Please choose between 1 and 4.")
 
             continue
 
@@ -104,17 +105,17 @@ def about_screen():
 
     clear()
     print("""
-    Zodiac signs are part of astrology, which is a belief system that 
-    suggests a connection between the positions and movements of celestial
-    bodies (such as planets and stars) and events and characteristics on Earth,
-    including human personality and behavior.\n
-    The zodiac is divided into twelve signs, each associated with specific dates
-    of the year. They are: Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, 
-    Scorpio, Sagittarius, Capricorn, Aquarius, and Pisces.\n
-    It is believed that each sign has its own set of characteristics, strengths, 
-    weaknesses, and compatibility with other signs. Remember that astrology is a
-    belief system and is not based on empirical scientific evidence.
-    """)
+Zodiac signs are part of astrology, which is a belief system that 
+suggests a connection between the positions and movements of celestial
+bodies (such as planets and stars) and events and characteristics on Earth,
+including human personality and behavior.\n
+The zodiac is divided into twelve signs, each associated with specific dates
+of the year. They are: Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, 
+Scorpio, Sagittarius, Capricorn, Aquarius, and Pisces.\n
+It is believed that each sign has its own set of characteristics, 
+strengths, weaknesses, and compatibility with other signs. Remember that
+astrology is a belief system and is not based on empirical scientific evidence.
+""")
 
 
 def clear():
@@ -244,7 +245,6 @@ def result_screen(sign, result):
     Displays the zodiac sign description and result.
     Args:
         sign (str): The zodiac sign of the user.
-        result (int): The affinity score indicating the number of correct answers.
     """
     
     print("""
@@ -258,11 +258,21 @@ Enjoy it in a relaxed manner!\n""")
 
     print(f"    A brief description about your zodiac sign:{sign_description[sign]}")
 
-    try:
-        worksheet = update_worksheet(sign, result)
-        draw_progressbar(worksheet)
-    except Exception as e:
-        print("Unable to connect to the internet: ", e)
+
+def statistics_screen(sign, result):
+    """
+    This function displays the previous compatibility statistics on the screen.
+
+    Args:
+        sign (str): The zodiac sign.
+        result: The calculated compatibility percentage.
+    """
+    
+        try:
+            worksheet = update_worksheet(sign, result)
+            draw_progressbar(worksheet)
+        except Exception as e:
+            print("Unable to connect to the internet: ", e)
 
 
 def draw_progressbar(worksheet):
@@ -326,8 +336,17 @@ def choose_screen(menu_id):
 
         case 3:
             clear()
+            print("Here you can find the compatibility percentages for all zodiac signs")
+            print("based on the results of tests conducted up to this point.")
+            print("These percentages represent the affinity between the characteristics")
+            print("of each sign and the answers provided in the tests:")
+
+
+        case 4:
+            clear()
             print("\nThank you for exploring CosmoCompatibility!")
             print("Have a great day and see you next time!\n")
+
 
 
     return menu_id
@@ -342,7 +361,7 @@ def main():
 
     while True:
         result = menu()
-        if result == 3:
+        if result == 4:
             break
   
 main()
