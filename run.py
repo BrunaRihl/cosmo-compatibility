@@ -4,10 +4,9 @@ import os
 
 from dateutil.relativedelta import relativedelta
 from tqdm import tqdm
-
 from data import data, signs, sign_description
 try:
-    from auth import update_worksheet
+    from auth import update_worksheet, get_worksheet
 except Exception as e:
     print("Unable to connect to the internet: ", e)
 
@@ -36,13 +35,12 @@ def get_sign(day, month):
     for sign in signs:
         period = signs[sign]
         if period["start"].month > period["end"].month:
-            period["end"] = period["end"] + relativedelta(years=1) 
+            period["end"] = period["end"] + relativedelta(years=1)
     
         if period["start"] <= birthday <= period["end"]:
             return sign
     
     return "Invalid month or day"
-
 
 def header():
     """
@@ -240,7 +238,7 @@ def test_screen(sign):
         return affinity_score
 
 
-def result_screen(sign, result):
+def result_screen(sign):
     """
     Displays the zodiac sign description and result.
     Args:
@@ -267,12 +265,16 @@ def statistics_screen(sign, result):
         sign (str): The zodiac sign.
         result: The calculated compatibility percentage.
     """
-    
-        try:
+
+    try:
+        if result and sign:
             worksheet = update_worksheet(sign, result)
-            draw_progressbar(worksheet)
-        except Exception as e:
-            print("Unable to connect to the internet: ", e)
+        else:
+            worksheet = get_worksheet()
+
+        draw_progressbar(worksheet)
+    except Exception as e:
+        print("Unable to connect to the internet: ", e)
 
 
 def draw_progressbar(worksheet):
@@ -308,6 +310,8 @@ def choose_screen(menu_id):
         menu_id (int): The ID of the chosen menu option.
     Returns: int: The menu option chosen.
     """
+    result = 0
+    sign = ""
     match menu_id:
         case 1:
             about_screen()
@@ -332,7 +336,7 @@ def choose_screen(menu_id):
             sign = sign.lower()
             print_sign(sign)
             result = test_screen(sign)
-            result_screen(sign, result)
+            result_screen(sign)
 
         case 3:
             clear()
@@ -341,13 +345,13 @@ def choose_screen(menu_id):
             print("These percentages represent the affinity between the characteristics")
             print("of each sign and the answers provided in the tests:")
 
+            statistics_screen(sign, result)
+
 
         case 4:
             clear()
             print("\nThank you for exploring CosmoCompatibility!")
             print("Have a great day and see you next time!\n")
-
-
 
     return menu_id
 

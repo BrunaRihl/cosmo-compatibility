@@ -54,4 +54,8 @@ def update_worksheet(sign, hits):
     # return all values
     return WORKSHEET.get_all_values()
 
+def get_worksheet():
+    return WORKSHEET.get_all_values()
+
+
 

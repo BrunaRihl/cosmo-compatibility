@@ -1,6 +1,6 @@
 # CosmoCompatibility
 
-Cosmo Compatibility test is a Python application that provides a personalized testing experience based on astrological signs. The program was designed to offer users a journey of knowledge and entertainment, allowing exploration of the distinctive characteristics associated with the zodiac signs.
+The Cosmic Compatibility test is a Python application that consists of a 10-question multiple-choice test, providing a personalized testing experience based on astrological signs. The program was designed to offer users a journey of knowledge and entertainment, allowing exploration of the distinctive characteristics associated with the zodiac signs.
 
 ![CosmoCompatibility shown on a range of devices](/assets/images/docs/)  
 
@@ -13,10 +13,10 @@ The live demo is available [here]()!
   * [Program Overview](#program-overview)
   * [User base](#user-base)
   * [Project Goals](#project-goals)
-  * [Program Flowchart](#wireframes)
+  * [Flowchart](#flowchart)
 
 * [Features](#features)
-  * [General Features on Page](#features)
+  * [General Features](#features)
   * [Features and resources to be added in the future](#features-and-resources-to-be-added-in-the-future)
 
 * [Testing](#testing)
@@ -25,8 +25,9 @@ The live demo is available [here]()!
   * [Bugs](#bugs)
 
 * [Technologies Used](#technologies-used)
-  * [Languages Used](#languages-used)
-  * [Python Packages Used](#frameworks-libraries--programs-used)
+  * [Languages](#languages)
+  * [Frameworks, Libraries & Programs](#frameworks-libraries--programs)
+  * [Python Packages](#python-packages)
 
 * [Deployment](#deployment)
 
@@ -35,6 +36,7 @@ The live demo is available [here]()!
   * [Content](#content)
   * [Media](#media)
   * [Acknowledgments](#acknowledgments)
+
 
 ## User Experience
 
@@ -62,3 +64,13 @@ CosmicCompatibility test is an original application that immerses users in the u
 * Cultivate an Engaging User Experience: Ensure that the design and functionalities of the program offer an attractive experience, capturing users' attention during interaction.
 
 * Prioritize User-Friendly Interface: Ensure intuitive navigation and ease of use, allowing users to access information and interact with the program's features effortlessly.
+
+
+## Flowchart
+
+In the planning stage, I drafted a basic structure that depicted the desired functionality and interaction for the program.This outline aimed to facilitate the visualization of goals and the definition of the desired execution method.
+
+As development progressed, I identified elements that needed to be included and others that required a different order of operation. These changes were gradually incorporated into the initial outline. The outline was conceived using the Lucidchart tool.
+
+![Flowchart](/assets/)  
+
