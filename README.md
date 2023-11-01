@@ -190,3 +190,57 @@ In order to ensure code quality, the program's code was validated and corrected 
 ![PEP8 Validation - Index](/assets/docs/pep8ci-1.png) 
 
 The corrections were implemented in accordance with the validator's suggestions.
+
+### Bugs
+
+#### Solved Bugs
+
+#### Correct Numbering of Answer Options
+
+  * Bug Description:
+
+  Even though the range of options was adjusted from 1 to 4, initially the options were still displayed from 0 to 3. After fixing this issue, a new complication arose. Although the options were displayed correctly from 1 to 4, the program still internally associated them as values from 0 to 3. This caused confusion when checking if the user had selected the correct answer.
+
+![bug - correct numbering](/assets/docs/bug1-solved.png)
+
+
+  * Action Taken:
+
+  Firstly, the section of the code responsible for generating the answer options was identified. Specific changes were made in three parts of the code by adding the number 1 to correctly identify the user's response and ensure that the options were numbered from 1 to 4.
+
+![Solved bug - correct numbering](/assets)
+
+#### Naming Conflict
+
+  * Bug Description:
+
+  Another issue encountered was related to the test result, which was not being updated correctly. After investigating the cause of the error, it was identified that the chosen variable name, "hits," was conflicting with an argument in the function that had the same name.
+
+  * Action Taken:
+
+  To address this problem, the variable was renamed to "hits_col," thereby avoiding the conflict with the existing argument in the function. With this change, the test result started updating correctly.
+
+
+![Solved bug - naming conflict](/assets/docs/bug2.png)
+
+
+#### Disruption of program name ASCII art
+
+  * Bug Description:
+
+The latest issue encountered was related to the artwork of the test name initially created with the pyfiglet library. This artwork was displaying incorrectly when executed in the terminal after deployment. I believe the size of the generated image was exceeding the appropriate limits.
+
+![bug - ASCII art](/assets/docs/bug3-1.png)
+
+
+  * Action Taken:
+
+I replaced the use of the pyfiglet library with ASCII art fonts generated from an external website (fsymbols). This measure definitively resolved the display issue.
+
+![Solved bug - ASCII art](/assets/docs/bug3-solved.png)
+
+#### Unsolved Bugs
+
+No unfixed bugs.
+
+
