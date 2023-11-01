@@ -5,7 +5,6 @@ Dictionary of zodiac sign dates.
 Each sign has a start date and an end date.
 Will be used to identify a person's zodiac sign based on the provided date of birth.
 """
-
 signs = {
     "Aries": {
         "start": date(2023, 3, 21),
@@ -236,7 +235,6 @@ data = [
         }
     }
 ]
-
 
 
 """

@@ -20,6 +20,7 @@ SHEET = GSPREAD_CLIENT.open('cosmo_compatibility')
 TOTAL_QUESTIONS = 10
 WORKSHEET = SHEET.worksheet('sumary')
 
+
 def update_worksheet(sign, hits):
     """
     Updates the Google Sheets worksheet with compatibility test results.
@@ -53,6 +54,7 @@ def update_worksheet(sign, hits):
 
     # return all values
     return WORKSHEET.get_all_values()
+
 
 def get_worksheet():
     return WORKSHEET.get_all_values()

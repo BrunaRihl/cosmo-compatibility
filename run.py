@@ -70,7 +70,7 @@ def initial_screen():
     header()
     print("Welcome to the CosmoCompatibility Zodiac Traits Test!")
     print("This program will calculate the percentage of traits you")
-    print("share in common with your zodiac sign.")
+    print("share in common with your zodiac sign.\n")
 
 
 def menu():
@@ -78,7 +78,7 @@ def menu():
     Displays the menu and prompts the user to choose an option.
     """
 
-    print("\n--- Zodiac Compatibility Test Menu ---")
+    print("--- Zodiac Compatibility Test Menu ---")
     print("1. Learn more about Zodiac Signs")
     print("2. Start the Compatibility Test")
     print("3. View Compatibility Percentages")
@@ -256,8 +256,8 @@ def result_screen(sign):
     print(
         """
     Test complete!  This is your final result! \n
-Remember, a person's personality is influenced by a variety of factors beyond
-their sun sign. This test was created for fun and entertainment. 
+Remember, a person's personality is influenced by a variety of factors 
+beyond their sun sign. This test was created for fun and entertainment. 
 Enjoy it in a relaxed manner!\n"""
     )
 
@@ -307,7 +307,7 @@ def draw_progressbar(worksheet):
 
         with tqdm(total=100, ncols=60, bar_format=sign + format) as pbar:
             pbar.update(int(float(row[3])))
-
+    print("")    
 
 def choose_screen(menu_id):
     """
@@ -350,7 +350,7 @@ def choose_screen(menu_id):
         case 3:
             clear()
             print("The following percentages reflect the affinity between the characteristics") 
-            print("of each sign and the answers provided in the previously completed tests.")
+            print("of each sign and the answers provided in the previously completed tests.\n")
             if not worksheet:
                 worksheet = statistics()
 
