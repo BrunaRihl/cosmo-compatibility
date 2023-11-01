@@ -80,12 +80,14 @@ The "Cosmo Compatibility" begins with an introductory screen, providing an expla
 
 ### Introduction
 
-The program utilizes a website to generate stylized text in ASCII art format, presenting the program's name in a way that grabs attention. Just below, a brief explanation is provided to contextualize the purpose of the test. On the same screen, the main menu offers four clear options: explore the zodiac signs, start the test, view compatibility percentages, or exit the program
+The program utilizes a website to generate stylized text in ASCII art format, presenting the program's name in a way that grabs attention. Just below, a brief explanation is provided to contextualize the purpose of the test. On the same screen, the main menu offers four clear options: explore the zodiac signs, start the test, view compatibility percentages, or exit the program.
+
 ![Introduction -  opening screen](/assets/docs/initial-screen.png)
 
 ### Learn more about Zodiac Signs
 
 Given that many people who will take the test may not be familiar with the subject, the first menu option was designed to provide an introduction to the user about what zodiac signs are. This aims to facilitate the user's participation in the test. At this stage of the program, we provide a broader understanding of the meaning of zodiac signs.
+
 ![menu -  option 1](/assets/docs/about-screen.png)
 
 ### Start the Compatibility Test
@@ -108,7 +110,7 @@ The progress bar is a visual tool that provides an indication of the test's prog
 
 ![progress bar](/assets/docs/progress-b.png)
 
-###· Result screen
+#### Result screen
 
 In the beginning, it displays the compatibility percentage determined by the individual in relation to their zodiac sign, accompanied by a message providing some insights about this result.
 
@@ -250,13 +252,13 @@ No unfixed bugs.
 
 Visual Studio Code (VS Code): Utilized as a source code editor.
 
-[Google Sheets](https://fonts.google.com/): Used to store application data 
+[Google Sheets](https://www.google.com/sheets/about/): Used to store application data 
 
 [Lucidchart](https://lucid.app/): employed in the planning phase for crafting flowcharts
 
 [Heroku Platform](https://dashboard.heroku.com/apps): for deploying the application in a live environment.
 
-[Pep8 online](http://ww7.pep8online.com/): Used to identify issues in my Python code. 
+[Pep8 online](https://pep8ci.herokuapp.com/): Used to identify issues in my Python code. 
 
 [GitHub](https://github.com/): Used to save and store the website files.
 
@@ -316,6 +318,7 @@ Visual Studio Code (VS Code): Utilized as a source code editor.
 
 8. **Finalize Deployment:**
    - Wait for the app to build. Once ready, you will see the "App was successfully deployed" message and a 'View' button to take you to your deployed link.
+
 
 You can access the live project by clicking [here](https://cosmo-compatibility-e109d3109566.herokuapp.com/).
 
