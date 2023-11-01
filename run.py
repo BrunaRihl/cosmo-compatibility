@@ -252,10 +252,10 @@ def result_screen(sign):
 
     print(
         """
-    Test complete!  This is your final result! \n
+      Test complete!  This is your final result! \n
 Remember, a person's personality is influenced by a variety of factors
 beyond their sun sign. This test was created for fun and entertainment.
-Enjoy it in a relaxed manner!\n"""
+Enjoy it in a relaxed manner!"""
     )
 
     print(f"""
