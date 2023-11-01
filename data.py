@@ -3,7 +3,8 @@ from datetime import date
 """
 Dictionary of zodiac sign dates.
 Each sign has a start date and an end date.
-Will be used to identify a person's zodiac sign based on the provided date of birth.
+Will be used to identify a person's zodiac sign
+based on the provided date of birth.
 """
 signs = {
     "Aries": {
@@ -58,10 +59,10 @@ signs = {
 
 
 """
-'data' is a list of dictionaries, each containing a 'question' and its corresponding 
-'answer' options for different zodiac signs.
-This data structure is used to gather user input and provide personality insights based 
-on their zodiac sign.
+'data' is a list of dictionaries, each containing a 'question'
+and its corresponding 'answer' options for different zodiac signs.
+This data structure is used to gather user input and provide
+personality insights based on their zodiac sign.
 """
 data = [
     {
@@ -88,18 +89,27 @@ data = [
             "taurus": "Seeking comfort and emotional stability.",
             "gemini": "Talking to others to gain different perspectives.",
             "cancer": "Retreating to a safe space to process emotions.",
-            "leo": "Expressing oneself confidently and seeking attention and support.",
-            "virgo": "Analyzing the situation in detail to find practical solutions.",
-            "libra": "Striving for emotional balance and trying to find harmony.",
-            "scorpio": "Delving deep into emotions and seeking to understand the reasons behind them.",
-            "sagittarius": "Facing challenges with optimism and seeking new perspectives.",
-            "capricorn": "Keeping calm and finding rational solutions to overcome obstacles.",
-            "aquarius": "Finding innovative ways to deal with emotions and seeking independence.",
-            "pisces": "Surrendering to emotions and seeking creative ways to deal with them."
+            "leo": """Expressing oneself confidently and seeking attention
+and support.""",
+            "virgo": """Analyzing the situation in detail to find practical
+solutions.""",
+            "libra": """Striving for emotional balance and trying to find
+harmony.""",
+            "scorpio": """Delving deep into emotions and seeking to understand
+the reasons behind them.""",
+            "sagittarius": """Facing challenges with optimism and seeking new
+perspectives.""",
+            "capricorn": """Keeping calm and finding rational solutions to
+overcome obstacles.""",
+            "aquarius": """Finding innovative ways to deal with emotions and
+seeking independence.""",
+            "pisces": """Surrendering to emotions and seeking creative ways to
+deal with them."""
         }
     },
     {
-        "question": "Choose the option that best describes your approach to life?",
+        "question": """Choose the option that best describes your approach
+to life?""",
         "answer": {
             "aries": "Entrepreneurial",
             "taurus": "Balanced",
@@ -116,7 +126,8 @@ data = [
         }
     },
     {
-        "question": "Choose the word that best describes your communication style:",
+        "question": """Choose the word that best describes your communication
+style:""",
         "answer": {
             "aries": "Direct",
             "taurus": "Calm",
@@ -133,7 +144,8 @@ data = [
         }
     },
     {
-        "question": "Which of these activities do you prefer to do in your free time?",
+        "question": """Which of these activities do you prefer to do in your
+free time?""",
         "answer": {
             "aries": "Practice a sport",
             "taurus": "Read a book",
@@ -150,7 +162,8 @@ data = [
         }
     },
     {
-        "question": "Choose the option that best aligns with your relationship preferences:",
+        "question": """Choose the option that best aligns with your
+relationship preferences:""",
         "answer": {
             "aries": "Passionate and intense",
             "taurus": "Stable and loyal",
@@ -170,17 +183,26 @@ data = [
         "question": "How do you deal with unexpected changes?",
         "answer": {
             "aries": "Adapt quickly and embrace the change.",
-            "taurus": "Take time to assess the situation and then make adjustments.",
-            "gemini": "Appreciate the novelty and seek to understand all possibilities.",
-            "cancer": "Get emotionally shaken, but find support to deal with it.",
+            "taurus": """Take time to assess the situation and then
+make adjustments.""",
+            "gemini": """Appreciate the novelty and seek to understand
+all possibilities.""",
+            "cancer": """Get emotionally shaken, but find support to deal
+with it.""",
             "leo": "Face the change with confidence and determination.",
             "virgo": "Analyze details and create a plan to handle the change.",
-            "libra": "Seek balance and find ways to handle the change harmoniously.",
-            "scorpio": "Delve into the reasons behind the change and adapt with intensity.",
-            "sagittarius": "Face the change as a new adventure and seize the opportunity.",
-            "capricorn": "Stay calm and seek a practical approach to handle the change.",
-            "aquarius": "See the change as an opportunity for growth and innovation.",
-            "pisces": "Feel the change deeply and seek ways to emotionally connect with it."
+            "libra": """Seek balance and find ways to handle the
+change harmoniously.""",
+            "scorpio": """Delve into the reasons behind the change and adapt
+with intensity.""",
+            "sagittarius": """Face the change as a new adventure and seize
+the opportunity.""",
+            "capricorn": """Stay calm and seek a practical approach to handle
+the change.""",
+            "aquarius": """See the change as an opportunity for growth and
+innovation.""",
+            "pisces": """Feel the change deeply and seek ways to emotionally
+connect with it."""
         }
     },
     {
@@ -188,9 +210,10 @@ data = [
         "answer": {
             "aries": "Take the lead and take immediate action.",
             "taurus": "Contribute with my experience and stability.",
-            "gemini": "Exchange ideas and collaborate with different perspectives.",
+            "gemini": """Exchange ideas and collaborate with different
+perspectives.""",
             "cancer": "Focus on creating an environment of emotional support.",
-            "leo": "Inspire and encourage the group to achieve ambitious goals.",
+            "leo": "Inspire the group to achieve ambitious goals.",
             "virgo": "Pay attention to details and organize tasks.",
             "libra": "Seek to balance opinions and find consensus solutions.",
             "scorpio": "Dive deep into issues and seek solutions intensely.",
@@ -211,110 +234,116 @@ data = [
             "virgo": "Meticulously organize my time and resources.",
             "libra": "Seek to balance quality with efficiency.",
             "scorpio": "Concentrate intensely and face challenges head-on.",
-            "sagittarius": "Maintain a positive attitude and focus on problem-solving.",
+            "sagittarius": """Maintain a positive attitude and focus on
+problem-solving.""",
             "capricorn": "Plan strategically and keep my focus on the goal.",
-            "aquarius": "Introduce innovation and new approaches to deal with pressure.",
-            "pisces": "Trust my intuition and find creative ways to handle the situation."
+            "aquarius": """Introduce innovation and new approaches to deal
+with pressure.""",
+            "pisces": """Trust my intuition and find creative ways to handle
+the situation."""
         }
     },
     {
-        "question": "How do you usually motivate yourself to face challenges in your daily life?",
+        "question": "How do you motivate yourself to face daily challenges?",
         "answer": {
-            "aries": "Find motivation in competition and the pursuit of surpassing limits.",
-            "taurus": "Motivation comes from stability and achieving personal goals.",
-            "gemini": "Seek motivation in the variety of experiences and learning opportunities.",
-            "cancer": "Motivation arises from the desire to create an emotionally secure environment.",
-            "leo": "Am motivated by the opportunity to shine and be recognized.",
-            "virgo": "Find motivation in the pursuit of perfection and efficiency.",
-            "libra": "Motivation comes from seeking balance and harmony.",
-            "scorpio": "Find motivation in seeking depth and transformation.",
-            "sagittarius": "Am motivated by the quest for adventure and personal growth.",
-            "capricorn": "Motivation arises from the pursuit of long-term goals.",
-            "aquarius": "Find motivation in innovation and the pursuit of new ideas.",
-            "pisces": "Motivation comes from emotional connection and empathy with others."
+            "aries": "Competing and surpassing limits.",
+            "taurus": "Stabilizing and achieving personal goals.",
+            "gemini": "Experiencing and learning.",
+            "cancer": "Creating an emotionally secure environment.",
+            "leo": "Shining and being recognized.",
+            "virgo": "Pursuing perfection and efficiency.",
+            "libra": "Seeking balance and harmony.",
+            "scorpio": "Delving and transforming.",
+            "sagittarius": "Adventuring and growing personally.",
+            "capricorn": "Pursuing long-term goals.",
+            "aquarius": "Innovating and pursuing new ideas.",
+            "pisces": "Connecting emotionally and empathizing with others."
         }
     }
 ]
 
 
 """
-'sign_description' is a dictionary containing detailed descriptions of each zodiac sign.
-Each sign's description includes information about their ruling element, characteristics, and values.
-This data structure can be used to provide users with insights into their zodiac sign's traits 
+'sign_description' is a dictionary containing detailed descriptions of each
+zodiac sign. Each sign's description includes information about their ruling
+element, characteristics, and values. This data structure can be used to
+provide users with insights into their zodiac sign's traits
 and tendencies at the end of the test.
 """
 sign_description = {
     "aries": """
     Aries (March 21 - April 19):
-    Aries is a fire sign ruled by Mars. 
-    People of this sign are known for their energy, 
-    courage, and impulsiveness. They are natural leaders, 
+    Aries is a fire sign ruled by Mars.
+    People of this sign are known for their energy,
+    courage, and impulsiveness. They are natural leaders,
     often acting with determination and enthusiasm.
     """,
     "taurus": """
     Taurus (April 20 - May 20):
-    Taurus is an earth sign ruled by Venus. 
-    Taureans are practical, patient, and value stability. 
+    Taurus is an earth sign ruled by Venus.
+    Taureans are practical, patient, and value stability.
     They are known for their loyalty and appreciation for material comfort.
     """,
     "gemini": """
     Gemini (May 21 - June 20):
-    Gemini is an air sign ruled by Mercury. 
-    People of this sign are communicative, adaptable, and often have quick minds. 
+    Gemini is an air sign ruled by Mercury.
+    People of this sign are communicative, adaptable, and often
+    have quick minds.
     They are curious and appreciate variety.
     """,
     "cancer": """
     Cancer (June 21 - July 22):
-    Cancer is a water sign ruled by the Moon. 
-    Cancerians are highly sensitive and emotional. 
+    Cancer is a water sign ruled by the Moon.
+    Cancerians are highly sensitive and emotional.
     They value family, home, and have a strong intuition.
     """,
     "leo": """
     Leo (July 23 - August 22):
-    Leo is a fire sign ruled by the Sun. 
-    Leos are charismatic, confident, and have a commanding presence. 
+    Leo is a fire sign ruled by the Sun.
+    Leos are charismatic, confident, and have a commanding presence.
     They value creativity and often take on leadership roles.
     """,
     "virgo": """
     Virgo (August 23 - September 22):
-    Virgo is an earth sign ruled by Mercury. 
-    Virgos are analytical, methodical, and have a critical eye for detail. 
+    Virgo is an earth sign ruled by Mercury.
+    Virgos are analytical, methodical, and have a critical eye for detail.
     They value organization and efficiency.
     """,
     "libra": """
     Libra (September 23 - October 22):
-    Libra is an air sign ruled by Venus. 
-    Librans are diplomatic, fair-minded, and value harmony in relationships. 
+    Libra is an air sign ruled by Venus.
+    Librans are diplomatic, fair-minded, and value harmony in relationships.
     They are known for their elegance and sense of style.
     """,
     "scorpio": """
     Scorpio (October 23 - November 21):
-    Scorpio is a water sign ruled by Pluto (formerly Mars). 
-    Scorpios are intense, passionate, and often possess a mysterious aura. 
+    Scorpio is a water sign ruled by Pluto (formerly Mars).
+    Scorpios are intense, passionate, and often possess a mysterious aura.
     They value authenticity and loyalty.
     """,
     "sagittarius": """
     Sagittarius (November 22 - December 21):
-    Sagittarius is a fire sign ruled by Jupiter. 
-    Sagittarians are optimistic, adventurous, and have an expansive mind. 
+    Sagittarius is a fire sign ruled by Jupiter.
+    Sagittarians are optimistic, adventurous, and have an expansive mind.
     They value freedom and the pursuit of knowledge.
     """,
     "capricorn": """
     Capricorn (December 22 - January 19):
-    Capricorn is an earth sign ruled by Saturn. 
-    Capricorns are ambitious, disciplined, and take a pragmatic approach to life. 
+    Capricorn is an earth sign ruled by Saturn.
+    Capricorns are ambitious, disciplined, and take a pragmatic
+    approach to life.
     They value responsibility and long-term success.
     """,
     "aquarius": """
     Aquarius (January 20 - February 18):
-    Aquarius is an air sign ruled by Uranus (formerly Saturn). 
-    Aquarians are visionary, humanitarian, and value originality. 
+    Aquarius is an air sign ruled by Uranus (formerly Saturn).
+    Aquarians are visionary, humanitarian, and value originality.
     They are progressive and have an innovative mind.
     """,
     "pisces": """
     Pisces (February 19 - March 20):
-    Pisces is a water sign ruled by Neptune (formerly Jupiter). 
-    Pisceans are intuitive, sensitive, and often have an artistic nature. 
+    Pisces is a water sign ruled by Neptune (formerly Jupiter).
+    Pisceans are intuitive, sensitive, and often have an artistic nature.
     They value compassion and spirituality.
     """
 }
