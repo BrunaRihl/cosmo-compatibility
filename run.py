@@ -26,22 +26,28 @@ def get_sign(day, month):
     Args:
         day (int): The day of birth.
         month (int): The month of birth.
-    Returns the zodiac sign associated with the date, or "Invalid month or day"
-    if the input is invalid.
     """
     year = get_year()
     birthday = datetime.date(year, month, day)
 
-    for sign in signs:
-        period = signs[sign]
-        if period["start"].month > period["end"].month:
-            period["end"] = period["end"] + relativedelta(years=1)
+for sign in signs:
+    period = signs[sign]
+    if sign == "Capricorn" and birthday.month == 1:
+        # Check if the sign is Capricorn and the birthday month is January
+        period["start"] = datetime.date(year-1, period["start"].month, period["start"].day)
+        period["end"] = datetime.date(year, period["end"].month, period["end"].day)
+        # If so, adjust the start and end dates to account for the transition 
+        #from December to January
+    if period["start"].month > period["end"].month:
+        period["end"] = period["end"] + relativedelta(years=1)
+        # If the start month is greater than the end month, adjust the end date to account for 
+        #the transition to the next year
+    if period["start"] <= birthday <= period["end"]:
+        return sign
+        # Check if the birthday falls within the date range for the current zodiac sign.
+        # If so, return the zodiac sign.
 
-        if period["start"] <= birthday <= period["end"]:
-            return sign
-
-    return "Invalid month or day"
-
+return "Invalid month or day"
 
 def header():
     """
@@ -366,8 +372,9 @@ def choose_screen(menu_id):
 
 def main():
     """
-    Prompts the user for their birthdate and conducts the test.
-    Runs the main program logic for the Zodiac Traits Test.
+    Handles the main flow of the program, displaying the initial
+    screen and processing menu choices.
+    Exits the loop if the user chooses to quit.
     """
     initial_screen()
 

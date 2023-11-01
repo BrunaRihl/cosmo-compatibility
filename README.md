@@ -1,11 +1,11 @@
 # CosmoCompatibility
 
-The Cosmic Compatibility test is a Python application that consists of a 10-question multiple-choice test, providing a personalized testing experience based on astrological signs. The program was designed to offer users a journey of knowledge and entertainment, allowing exploration of the distinctive characteristics associated with the zodiac signs.
+The CosmoCompatibility test is a Python application that consists of a 10-question multiple-choice test, providing a personalized testing experience based on astrological signs. The program was designed to offer users a journey of knowledge and entertainment, allowing exploration of the distinctive characteristics associated with the zodiac signs.
 
 ![CosmoCompatibility shown on a range of devices](/assets/docs/mockup.png/)  
 
 ## Demo
-The live demo is available [here]()!
+The live demo is available [here](https://cosmo-compatibility-e109d3109566.herokuapp.com/)!
 
 ## Contents
 
@@ -42,7 +42,7 @@ The live demo is available [here]()!
 
 ### Program Overview 
 
-CosmicCompatibility test is an original application that immerses users in the universe of zodiac signs and their personality traits. This experience provides an interactive view, encouraging participants to delve into the rich mythology underlying the zodiac signs.
+CosmoCompatibility test is an original application that immerses users in the universe of zodiac signs and their personality traits. This experience provides an interactive view, encouraging participants to delve into the rich mythology underlying the zodiac signs.
 
 ### User base
 
@@ -76,7 +76,7 @@ As development progressed, I identified elements that needed to be included and 
 
 ## Features
 
-The "Cosmo Compatibility" begins with an introductory screen, providing an explanation about the nature of the compatibility test. It then presents a user-friendly menu, offering four distinct choices. Users have the opportunity to deepen their understanding of the zodiac signs. Alternatively, they can initiate a 10-question multiple-choice test, aiming to assess, through a percentage bar, how compatible their personality traits are with the descriptions associated with their zodiac sign. Additionally, users can view the compatibility percentages from previous tests. From the main menu, users also have the convenience of concluding the program in a simple and conclusive manner. Through this elaborate interface, users have the freedom to navigate intuitively, customizing the experience to their preferences.
+The CosmoCompatibility begins with an introductory screen, providing an explanation about the nature of the compatibility test. It then presents a user-friendly menu, offering four distinct choices. Users have the opportunity to deepen their understanding of the zodiac signs. Alternatively, they can initiate a 10-question multiple-choice test, aiming to assess, through a percentage bar, how compatible their personality traits are with the descriptions associated with their zodiac sign. Additionally, users can view the compatibility percentages from previous tests. From the main menu, users also have the convenience of concluding the program in a simple and conclusive manner. Through this elaborate interface, users have the freedom to navigate intuitively, customizing the experience to their preferences.
 
 ### Introduction
 
@@ -409,7 +409,7 @@ While working on the development of my python program, there were occasions wher
 
 * [README Example](https://github.com/kera-cudmore/readme-examples/blob/main/milestone1-readme.md): To write the README file, I followed the structure and table format (testing section) from the readme-examples repository by Kera Cudmore.
 
-* The foundation of the project was established using the CI Love Maths example as a starting point.
+* The foundation of the project was established using the CI Love Sandwiches example as a starting point.
 
 ### Content
 
