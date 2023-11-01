@@ -1,6 +1,5 @@
 import random
 import datetime
-import os
 
 from dateutil.relativedelta import relativedelta
 from tqdm import tqdm
@@ -102,7 +101,7 @@ def about_screen():
     Clears the screen, displays the program header, and displays
     information about zodiac signs.
     """
-
+    
     clear()
     print(
         """
@@ -127,11 +126,6 @@ def clear():
     """
     print('\033c')
 
-"""    if os.name == "nt":
-        os.system("cls")
-    else:
-        os.system("clear")
-"""
 
 def print_sign(zodiac_sign):
     """
@@ -322,7 +316,6 @@ def choose_screen(menu_id):
     worksheet = None
     match menu_id:
         case 1:
-            clear()
             about_screen()
 
         case 2:

@@ -141,10 +141,10 @@ data = [
             "cancer": "Explore a new place",
             "leo": "Create something new",
             "virgo": "Work on personal projects",
-            "libra": "Try new things",
+            "libra": "Meet new people",
             "scorpio": "Investigate interesting topics",
             "sagittarius": "Go on an adventure",
-            "capricorn": "Work on personal projects",
+            "capricorn": "Focus on professional growth",
             "aquarius": "Try new things",
             "pisces": "Meditate or reflect"
         }
