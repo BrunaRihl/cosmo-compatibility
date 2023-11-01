@@ -340,7 +340,7 @@ Cloning a repository means obtaining a local copy to work on in your own develop
 4. Navigate to the directory where you want to clone the repository.
 5. Type `git clone` followed by the URL and press "enter".
 
-#### Setting up and Connecting APIs
+### Setting up and Connecting APIs
 
 To ensure the app functions correctly, it's essential to set up and connect APIs. In this project, two APIs were utilized:
 
@@ -380,3 +380,56 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('cosmo_compatibility')
 ```
 
+## Credits
+
+### Code
+
+While working on the development of my python program, there were occasions where I needed to conduct research that covered topics beyond the scope of the course or even required thorough revision. Below, I am sharing the links to the consulted sources:
+
+* [python.org - datetime: Basic date and time types](https://docs.python.org/pt-br/3/library/datetime.html)
+
+* [Github - README tqdm](https://github.com/tqdm/tqdm#tqdm)
+
+* [Programiz - Python Dictionary copy()](https://www.programiz.com/python-programming/methods/dictionary/copy)
+
+* [Geeksforgeeks - Python Match-Case Statement](https://www.geeksforgeeks.org/python-match-case-statement/)
+
+* [Stackoverflow - Add one year in current date PYTHON](https://stackoverflow.com/questions/15741618add-one-year-in-current-date-python)
+
+* [Stackoverflow - Clear terminal in Python ](https://stackoverflow.com/questions/2084508/clear-terminal-in-python)
+
+* [w3schools - Python round() Function](https://www.w3schools.com/python/ref_func_round.asp)
+
+* [gspread.org - Examples of gspread Usage](https://docs.gspread.org/en/latest/user-guide.html)
+
+* [Stackoverflow - Conditional import of modules in Python](https://stackoverflow.com/questions/3496592/conditional-import-of-modules-in-python)
+
+* [README Example](https://github.com/kera-cudmore/readme-examples/blob/main/milestone1-readme.md): To write the README file, I followed the structure and table format (testing section) from the readme-examples repository by Kera Cudmore.
+
+* The foundation of the project was established using the CI Love Maths example as a starting point.
+
+### Content
+
+I created  the content for my application.
+
+* [Astro Dienst](https://www.astro.com/horoscopel) and ChatGPT: used to write the information about the zodiac signs and to come up with ideas for questions and answers related to them.
+
+### Media
+
+MS Paint: used to edit the README images. 
+
+[Fsymbols](https://fsymbols.com/text-art/): ASCII art used to create text pictures with text symbols with the name of test/program.
+
+[Morckup Generator](https://techsini.com/multi-mockup/index.php): utilized to view the website's appearance and responsiveness across a range of devices.
+
+### Acknowledgments
+
+I would like to extend my sincere gratitude to the individuals who offered their assistance and support throughout the entirety of this project:
+
+Jubril Akolade, my mentor, for his guidance and constructive feedback.
+
+Laura Mayock, the Cohort Facilitator at Code Institute, for consistently steering our studies in the most effective direction.
+
+My friends Ivan Frezza and Bruna Andelieri, who provided valuable insights and clarified uncertainties about my code.
+
+My husband Jasser, for always motivating me, for his unwavering support, and for his patience throughout my study period.
