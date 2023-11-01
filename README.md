@@ -72,7 +72,7 @@ In the planning stage, I drafted a basic structure that depicted the desired fun
 
 As development progressed, I identified elements that needed to be included and others that required a different order of operation. These changes were gradually incorporated into the initial outline. The outline was conceived using the Lucidchart tool.
 
-![Flowchart](/assets/)  
+![Flowchart](/assets/docs/flow.png)  
 
 ## Features
 
@@ -81,40 +81,42 @@ The "Cosmo Compatibility" begins with an introductory screen, providing an expla
 ### Introduction
 
 The program utilizes a website to generate stylized text in ASCII art format, presenting the program's name in a way that grabs attention. Just below, a brief explanation is provided to contextualize the purpose of the test. On the same screen, the main menu offers four clear options: explore the zodiac signs, start the test, view compatibility percentages, or exit the program
-![Introduction -  opening screen](/assets/)
+![Introduction -  opening screen](/assets/docs/initial-screen.png)
 
 ### Learn more about Zodiac Signs
 
 Given that many people who will take the test may not be familiar with the subject, the first menu option was designed to provide an introduction to the user about what zodiac signs are. This aims to facilitate the user's participation in the test. At this stage of the program, we provide a broader understanding of the meaning of zodiac signs.
-![menu -  option 1](/assets/)
+![menu -  option 1](/assets/docs/about-screen.png)
 
 ### Start the Compatibility Test
 
 When the user clicks on option 2, they will initiate the test. To do this, the program will first collect the month and day of the user's birth in order to determine their zodiac sign.
 
-![collect data](/assets/)
+![collect data](/assets/docs/test-1.png)
 
 After collecting the data, the person's zodiac sign will be displayed on the screen, followed by instructions for the test.
 
-![zodiac sign and instructions](/assets/)
+![zodiac sign and instructions](/assets/docs/test-2.png)
 
 Right after, on the same screen, the test starts with the first question. A total of 10 questions will be presented, each with 4 answer choices. Both the questions and answers are randomized. However, out of the 4 options, one will always be the correct answer, namely, the one that best aligns with the personality described for the person's zodiac sign.
+
+![progress bar](/assets/docs/test-3.png)
 
 #### Progress bar
 
 The progress bar is a visual tool that provides an indication of the test's progress. It is displayed on the screen, just above the question, and shows the progress in terms of questions answered according to the personality description of your zodiac sign. The bar is updated with each user response. If the answer is correct, the bar advances; otherwise, it remains in the same position. The percentage displayed on the bar represents the progress percentage relative to the total number of questions. This feature helps keep the user informed about the test's status and provides an interactive and dynamic experience.
 
-![progress bar](/assets/)
+![progress bar](/assets/docs/progress-b.png)
 
 ###· Result screen
 
 In the beginning, it displays the compatibility percentage determined by the individual in relation to their zodiac sign, accompanied by a message providing some insights about this result.
 
-![result](/assets/)
+![result](/assets/docs/test-4-1.png)
 
 Following that, a brief description of the main characteristics associated with your zodiac sign is presented, with the menu located just below for you to choose your next step.
 
-![description zodiac sign](/assets/)
+![description zodiac sign](/assets/docs/test-4-2.png)
 
 ### Update the spreadsheet
 
@@ -125,17 +127,19 @@ Sign Row: The row corresponding to the user's zodiac sign is updated:
 * Column 3 (Number of Correct Answers): The number of correct answers is updated in this column.
 * Column 4 (Average Percentage of Correct Answers): This column is updated with the average percentage of correct answers from the tests that have been completed.
 
-![spreadsheet](/assets/)
+![spreadsheet](/assets/docs/spreadsheet.png)
 
 ### View Compatibility Percentages
 
 The third option in the menu provides users with the opportunity to explore the averages of tests previously taken by other users, based on the updated data from the spreadsheet. This information is visually presented through progress bars, offering a clear view of the compatibility percentages associated with each zodiac sign.
 
-![spreadsheet](/assets/)
+![spreadsheet](/assets/docs/statistics.png)
 
 ### Exit Program
 
 The final option (4) in the menu is 'Exit Program,' which allows users to conclude the program. Upon selecting this option, the program terminates gracefully, displaying a closing message.
+
+![spreadsheet](/assets/docs/exit.png)
 
 ## Features and resources to be added in the future
 
