@@ -139,7 +139,7 @@ def print_sign(zodiac_sign):
         zodiac_sign (str): The user's zodiac sign.
     """
     print(f'{"Your zodiac sign is " + zodiac_sign.upper():^60}')
-    print("\n\n")
+    print("\n")
 
 
 def print_instructions():
@@ -255,12 +255,10 @@ def result_screen(sign):
 
     print(
         """
-    Test complete!  This is your final result! \n    Thank you for completing the compatibility test!
+    Test complete!  This is your final result! \n
 
-Remember, a persons personality is influenced by a variety
-of factors beyond their sun sign, such as the positions of other planets 
-in their birth chart.This test was created for fun and entertainment, 
-not as an exact science. The traits associated with each sign are generalizations. 
+Remember, a person's personality is influenced by a variety of factors beyond
+their sun sign. This test was created for fun and entertainment. 
 Enjoy it in a relaxed manner!\n"""
     )
 
@@ -322,8 +320,8 @@ def choose_screen(menu_id):
     result = 0
     sign = ""
     worksheet = None
-    clear()
     match menu_id:
+        clear()
         case 1:
             clear()
             about_screen()
@@ -353,15 +351,8 @@ def choose_screen(menu_id):
 
         case 3:
             clear()
-            print(
-                "Here you can find the compatibility percentages for all zodiac signs"
-            )
-            print("based on the results of tests conducted up to this point.")
-            print(
-                "These percentages represent the affinity between the characteristics"
-            )
-            print("of each sign and the answers provided in the tests:")
-
+            print("The following percentages reflect the affinity between the characteristics") 
+            print("of each sign and the answers provided in the previously completed tests.")
             if not worksheet:
                 worksheet = statistics()
 
