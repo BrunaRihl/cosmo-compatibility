@@ -40,9 +40,11 @@ The live demo is available [here]()!
 
 ## User Experience
 
-### Website overview 
+### Program Overview 
 
 CosmicCompatibility test is an original application that immerses users in the universe of zodiac signs and their personality traits. This experience provides an interactive view, encouraging participants to delve into the rich mythology underlying the zodiac signs.
+
+![Solved bug - naming conflict](/assets/docs/mockup.png)
 
 ### User base
 
@@ -157,7 +159,6 @@ The final option (4) in the menu is 'Exit Program,' which allows users to conclu
 | --- | --- | --- | --- | --- |
 | **`Initial screen`** |
 |  |  |  |  |  |
-| Background-image | The background image should change according to the screen size used by the user. | Opening the game in different screen sizes. |. | Pass |
 | ASCII art initial screen |  The test name created with ASCII art should appear correctly without distorting the format| Pressing the 'Run Program' button | The test name displays correctly | Pass |
 | **`Menu`** |
 |  |  |  |  |  |
@@ -179,6 +180,13 @@ The final option (4) in the menu is 'Exit Program,' which allows users to conclu
 | **`Worksheet`** |
 |  |  |  |  |  |
 | Data update | When the test is completed, the spreadsheet should be updated with the number of participants who have completed it, the number of correct answers, and the average compatibility percentage | Finishing the test and checking the updates | The spreadsheet was updated correctly | Pass |
-| **`Colors`** |
-|  |  |  |  |  |
 
+### Validator Testing  
+
+* Python PEP8 Validation:  
+
+In order to ensure code quality, the program's code was validated and corrected using PEP 8.
+
+![PEP8 Validation - Index](/assets/docs/pep8ci-1.png) 
+
+The corrections were implemented in accordance with the validator's suggestions.
