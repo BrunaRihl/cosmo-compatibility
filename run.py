@@ -322,8 +322,10 @@ def choose_screen(menu_id):
     result = 0
     sign = ""
     worksheet = None
+    clear()
     match menu_id:
         case 1:
+            clear()
             about_screen()
 
         case 2:

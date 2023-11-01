@@ -145,4 +145,36 @@ The final option (4) in the menu is 'Exit Program,' which allows users to conclu
 
 * Implement a feedback feature at the end of the test that displays the answers marked as incorrect by the user, along with providing the response that aligns with the person's zodiac sign
 
+## Testing 
+
+### Manual Testing
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| **`Initial screen`** |
+|  |  |  |  |  |
+| Background-image | The background image should change according to the screen size used by the user. | Opening the game in different screen sizes. |. | Pass |
+| ASCII art initial screen |  The test name created with ASCII art should appear correctly without distorting the format| Pressing the 'Run Program' button | The test name displays correctly | Pass |
+| **`Menu`** |
+|  |  |  |  |  |
+| Option 1 | When selecting option 1, the program should redirect the user to the 'Learn more about Zodiac Signs' screen | Entering 1 as an option | The screen 'Learn more about Zodiac Signs' is displayed correctly | Pass |
+| Option 2 | When selecting option 2, the program should redirect the user to the 'Start the Compatibility Test' screen | Entering 2 as an option | The screen 'Start the Compatibility Test' is displayed correctly | Pass |
+| Option 3 | When selecting option 3, the program should redirect the user to the 'View Compatibility Percentages' screen | Entering 3 as an option | The screen 'View Compatibility Percentages' is displayed correctly | Pass |
+| Option 4 | When selecting option 4, the program should redirect the user to the 'Exit program' screen and terminate the program | Entering 4 as an option | The screen 'Exit program' is displayed and terminate the program correctly | Pass |
+| Invalid option | When an invalid number or character is entered, a valid input is required | Entering an invalid number or character | A valid input is required | Pass |
+| **`Compatibility Test`** |
+|  |  |  |  |  |
+| Day and month input | At the beginning of the test, the user is prompted to enter their month and day of birth. With this data, the program will display the user's zodiac sign | Entering valid days and months multiple times | The program correctly identifies the person's zodiac sign based on the provided dates and initiates the test | Pass |
+| Valid answer options | When the questions start, the program should provide 4 answer options, with one of them being the correct answer| Conducting the test with various zodiac signs and ensuring that the provided options always include the correct answer by comparing them with the data in data.py | The correct answer always appears as an option | Pass |
+| Invalid choice | When an invalid number or character is entered, a valid input is required | Entering an invalid number or character | A valid input is required | Pass |
+| **`Progress Bar`** |
+|  |  |  |  |  |
+| Progress Bar Display | The progress bar should be visible throughout the entire test and at the end of the test displaying the result | Answering test questions until the end | The progress bar is visible throughout the entire test | Pass |
+| Correct answer | When the user selects the correct answer, the percentage and the progress bar increase by 10% | Choosing the option with the correct answer and pressing Enter | The percentage and the progress bar increase by 10% | Pass |
+| Inorrect answer | When the user selects the incorrect answer, the percentage and the progress bar remain at the same value | Choosing the option with the incorrect answer and pressing Enter | The percentage and the progress bar remain at the same value | Pass |
+| **`Worksheet`** |
+|  |  |  |  |  |
+| Data update | When the test is completed, the spreadsheet should be updated with the number of participants who have completed it, the number of correct answers, and the average compatibility percentage | Finishing the test and checking the updates | The spreadsheet was updated correctly | Pass |
+| **`Colors`** |
+|  |  |  |  |  |
 
