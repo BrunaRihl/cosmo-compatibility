@@ -239,6 +239,32 @@ I replaced the use of the pyfiglet library with ASCII art fonts generated from a
 
 ![Solved bug - ASCII art](/assets/docs/bug3-solved.png)
 
+
+#### Capricorn and January Zodiac Sign Calculation Issue
+
+  * Bug Description:
+
+Previously, there was an issue with zodiac sign calculation. For individuals born in January under the sign of Capricorn, incorrect association occurred due to the December to January transition, leading to inaccuracies.
+
+  * Action Taken:
+
+Implemented a specific check for those born in January under Capricorn. Adjustments to start and end dates ensured accurate sign determination.
+
+![Solved bug - capricorn](/assets/docs/bug4-solved.png)
+
+#### Screen Clearing Issue
+
+  * Bug Description:
+
+During the development of my project, I imported the "os" module to clear the screen. However, after implementation, I noticed that the screen wasn't being cleared properly. This resulted in the creation of extra white spaces above the content of the new screens that were opening.
+
+  * Action Taken:
+
+Upon further investigation, I opted to use a different command to clear the screen: print('\033c'). This solution effectively resolved the issue, allowing me to remove the "os" module.
+
+![Solved bug - clear function](/assets/docs/bug5.png)
+
+
 #### Unsolved Bugs
 
 No unfixed bugs.

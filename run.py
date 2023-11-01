@@ -40,8 +40,8 @@ for sign in signs:
         #from December to January
     if period["start"].month > period["end"].month:
         period["end"] = period["end"] + relativedelta(years=1)
-        # If the start month is greater than the end month, adjust the end date to account for 
-        #the transition to the next year
+        # If the start month is greater than the end month, adjust the end date 
+        #to account for the transition to the next year
     if period["start"] <= birthday <= period["end"]:
         return sign
         # Check if the birthday falls within the date range for the current zodiac sign.
