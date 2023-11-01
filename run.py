@@ -139,7 +139,7 @@ def print_sign(zodiac_sign):
         zodiac_sign (str): The user's zodiac sign.
     """
     print(f'{"Your zodiac sign is " + zodiac_sign.upper():^60}')
-    print("\n")
+    print("")
 
 
 def print_instructions():
@@ -256,7 +256,6 @@ def result_screen(sign):
     print(
         """
     Test complete!  This is your final result! \n
-
 Remember, a person's personality is influenced by a variety of factors beyond
 their sun sign. This test was created for fun and entertainment. 
 Enjoy it in a relaxed manner!\n"""
@@ -321,7 +320,6 @@ def choose_screen(menu_id):
     sign = ""
     worksheet = None
     match menu_id:
-        clear()
         case 1:
             clear()
             about_screen()
