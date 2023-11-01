@@ -272,3 +272,111 @@ Visual Studio Code (VS Code): Utilized as a source code editor.
 
 * gspread: Used for interacting with Google Sheets, allowing reading and writing of data in Google Sheets spreadsheets.
 
+## Deployment  
+
+### Deploying Your Project on Heroku
+
+* To get your project up and running on Heroku, follow these steps:
+
+1. **Create a List of Dependencies:**
+   - In the terminal, run the command `pip3 freeze > requirements.txt` to generate a list of dependencies needed for Heroku deployment. This list will be saved in the "requirements.txt" file.
+
+2. **Heroku Account Setup:**
+   - Log in to your Heroku account or create a new one if needed.
+
+3. **Create a New App:**
+   - Click on "New" in the top-right corner of your Heroku Dashboard, and select "Create new app" from the dropdown menu.
+   - Enter a unique app name and choose a region (EU or USA) closest to you.
+   - Click on "Create App".
+
+4. **Configure Environment Variables:**
+   - In the "Settings" tab, scroll down to "Config Vars" and click "Reveal Config Vars".
+   - Add the following:
+     - KEY: `CREDS` (if using a creds.json file)
+     - VALUE: (Copy and paste the contents of your creds.json file)
+     - Click "Add".
+     - KEY: `PORT`
+     - VALUE: `8000`
+     - Click "Add".
+
+5. **Add Buildpacks:**
+   - Scroll further down to the "Buildpacks" section and click "Add buildpack".
+   - Select "python" and save changes.
+   - Add another buildpack and select "node.js" then save changes again.
+   - Ensure that the Python buildpack is listed above the Node.js buildpack.
+
+6. **Connect to GitHub:**
+   - Go to the "Deploy" tab and select "GitHub" as the deployment method.
+   - Click "Connect to GitHub" and search for your repository name.
+   - Click "Connect" to link the repository to Heroku.
+
+7. **Deploy the App:**
+   - Scroll down to "Manual deploy" and click "Deploy Branch". This allows you to view the build logs as the app is being constructed.
+   - After the initial deployment, you can enable "Enable Automatic Deploys" to keep the app up-to-date with your GitHub repository.
+
+8. **Finalize Deployment:**
+   - Wait for the app to build. Once ready, you will see the "App was successfully deployed" message and a 'View' button to take you to your deployed link.
+
+You can access the live project by clicking [here](https://cosmo-compatibility-e109d3109566.herokuapp.com/).
+
+### Forking the Repository
+
+Forking the repository allows you to create a copy of the original repository in your GitHub profile. This enables you to view and edit the code without affecting the original repository.
+
+**Steps:**
+
+1. In the "cosmo-compatibility" repository, click on "Fork" in the top right corner.
+2. Confirm the creation of the fork.
+
+### Cloning the Repository
+
+Cloning a repository means obtaining a local copy to work on in your own development environment.
+
+**Steps:**
+
+1. In the repository, click on "Code" above the file list.
+2. Copy the URL.
+3. Open Git Bash.
+4. Navigate to the directory where you want to clone the repository.
+5. Type `git clone` followed by the URL and press "enter".
+
+#### Setting up and Connecting APIs
+
+To ensure the app functions correctly, it's essential to set up and connect APIs. In this project, two APIs were utilized:
+
+- **Google Drive API**: This API provides the necessary credentials to access files on Google Drive.
+
+- **Google Sheets API**: This API allows interaction with Google Sheets, where the program's data is stored.
+
+Here's a summary of the steps:
+
+#### Configuring the Spreadsheet (Data Model):
+
+1. Log in to Google and open Google Sheets.
+2. Create a new spreadsheet.
+3. Add the necessary number of tabs.
+4. Insert data as required.
+
+#### Setting up the API:
+
+1. Access the Google Cloud Platform and create a new project.
+2. Enable "Google Drive API" and "Google Sheets API".
+3. Create credentials for the API and download the JSON file.
+
+#### Enabling the API in the Project:
+
+In the terminal, install the necessary libraries and add the initial code at the beginning of your Python file. The initial code was provided by the Code Institute, as shown below:
+
+```python
+SCOPE = [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/drive"
+]
+
+CREDS = Credentials.from_service_account_file('creds.json')
+SCOPED_CREDS = CREDS.with_scopes(SCOPE)
+GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
+SHEET = GSPREAD_CLIENT.open('cosmo_compatibility')
+```
+
