@@ -2,7 +2,7 @@
 
 The Cosmic Compatibility test is a Python application that consists of a 10-question multiple-choice test, providing a personalized testing experience based on astrological signs. The program was designed to offer users a journey of knowledge and entertainment, allowing exploration of the distinctive characteristics associated with the zodiac signs.
 
-![CosmoCompatibility shown on a range of devices](/assets/images/docs/)  
+![CosmoCompatibility shown on a range of devices](/assets/docs/mockup.png/)  
 
 ## Demo
 The live demo is available [here]()!
@@ -27,7 +27,7 @@ The live demo is available [here]()!
 * [Technologies Used](#technologies-used)
   * [Languages](#languages)
   * [Frameworks, Libraries & Programs](#frameworks-libraries--programs)
-  * [Python Packages](#python-packages)
+  * [Python Libraries and Modules](#python-libraries-and-modules)
 
 * [Deployment](#deployment)
 
@@ -43,8 +43,6 @@ The live demo is available [here]()!
 ### Program Overview 
 
 CosmicCompatibility test is an original application that immerses users in the universe of zodiac signs and their personality traits. This experience provides an interactive view, encouraging participants to delve into the rich mythology underlying the zodiac signs.
-
-![Solved bug - naming conflict](/assets/docs/mockup.png)
 
 ### User base
 
@@ -243,4 +241,34 @@ I replaced the use of the pyfiglet library with ASCII art fonts generated from a
 
 No unfixed bugs.
 
+## Technologies Used
+### Languages
+
+* Python 3.
+
+### Frameworks, Libraries & Programs
+
+Visual Studio Code (VS Code): Utilized as a source code editor.
+
+[Google Sheets](https://fonts.google.com/): Used to store application data 
+
+[Lucidchart](https://lucid.app/): employed in the planning phase for crafting flowcharts
+
+[Heroku Platform](https://dashboard.heroku.com/apps): for deploying the application in a live environment.
+
+[Pep8 online](http://ww7.pep8online.com/): Used to identify issues in my Python code. 
+
+[GitHub](https://github.com/): Used to save and store the website files.
+
+### Python Libraries and Modules
+
+* random: Used for generating pseudo-random numbers.
+
+* datetime: Used for date and time manipulation.
+
+* dateutil.relativedelta: Used for more flexible date manipulation.
+
+* tqdm: Used for creating interactive progress bars.
+
+* gspread: Used for interacting with Google Sheets, allowing reading and writing of data in Google Sheets spreadsheets.
 
