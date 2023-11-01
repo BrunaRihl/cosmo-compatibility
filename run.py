@@ -125,12 +125,13 @@ def clear():
     This function checks the operating system and uses the appropriate command
     to clears the terminal screen.
     """
+    print('\033c')
 
-    if os.name == "nt":
+"""    if os.name == "nt":
         os.system("cls")
     else:
         os.system("clear")
-
+"""
 
 def print_sign(zodiac_sign):
     """
