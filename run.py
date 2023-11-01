@@ -14,8 +14,8 @@ except Exception as e:
 def get_year():
     """
     Returns the year for calculations.
-    This function provides a way to use the datetime module independently of the
-    system's actual year.
+    This function provides a way to use the datetime module
+    independently of thesystem's actual year.
     """
     return 2023
 
@@ -50,10 +50,10 @@ def header():
     cosmo_message = """
 ▒█▀▀█ █▀▀█ █▀▀ █▀▄▀█ █▀▀█ 　
 ▒█░░░ █░░█ ▀▀█ █░▀░█ █░░█ 　
-▒█▄▄█ ▀▀▀▀ ▀▀▀ ▀░░░▀ ▀▀▀▀ 　 
+▒█▄▄█ ▀▀▀▀ ▀▀▀ ▀░░░▀ ▀▀▀▀
 ▒█▀▀█ █▀▀█ █▀▄▀█ █▀▀█ █▀▀█ ▀▀█▀▀ ░▀░ █▀▀▄ ░▀░ █░░ ░▀░ ▀▀█▀▀ █░░█
 ▒█░░░ █░░█ █░▀░█ █░░█ █▄▄█ ░░█░░ ▀█▀ █▀▀▄ ▀█▀ █░░ ▀█▀ ░░█░░ █▄▄█
-▒█▄▄█ ▀▀▀▀ ▀░░░▀ █▀▀▀ ▀░░▀ ░░▀░░ ▀▀▀ ▀▀▀░ ▀▀▀ ▀▀▀ ▀▀▀ ░░▀░░ ▄▄▄█ 
+▒█▄▄█ ▀▀▀▀ ▀░░░▀ █▀▀▀ ▀░░▀ ░░▀░░ ▀▀▀ ▀▀▀░ ▀▀▀ ▀▀▀ ▀▀▀ ░░▀░░ ▄▄▄█
 """
 
     print(cosmo_message)
@@ -101,18 +101,17 @@ def about_screen():
     Clears the screen, displays the program header, and displays
     information about zodiac signs.
     """
-    
     clear()
     print(
         """
-Zodiac signs are part of astrology, which is a belief system that 
+Zodiac signs are part of astrology, which is a belief system that
 suggests a connection between the positions and movements of celestial
 bodies (such as planets and stars) and events and characteristics on Earth,
 including human personality and behavior.\n
 The zodiac is divided into twelve signs, each associated with specific dates
-of the year. They are: Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, 
+of the year. They are: Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra,
 Scorpio, Sagittarius, Capricorn, Aquarius, and Pisces.\n
-It is believed that each sign has its own set of characteristics, 
+It is believed that each sign has its own set of characteristics,
 strengths, weaknesses, and compatibility with other signs. Remember that
 astrology is a belief system and is not based on empirical scientific evidence.
 """
@@ -140,9 +139,9 @@ def print_sign(zodiac_sign):
 def print_instructions():
     print("Instructions:")
     print("Choose the option that best aligns with your personality.")
-    print("If your choice matches the personality description of your zodiac sign,")
-    print("the compatibility progress bar will increase")
-    print("There are four options (1, 2, 3, 4). Type your choice and press 'Enter'\n")
+    print("If your choice matches the personality description of your zodiac")
+    print("sign, the compatibility progress bar will increase")
+    print("Choose from options 1 to 4. Type your choice and press 'Enter'\n")
 
 
 def shuffle_data(s_data):
@@ -160,7 +159,8 @@ def shuffle_answers(answers):
     """
     Randomly selects a zodiac sign from a dictionary of answers.
     Args:
-        answers (dict): A dictionary of zodiac signs and their corresponding answers.
+        answers (dict): A dictionary of zodiac signs and
+        their corresponding answers.
     Returns str: A randomly selected zodiac sign.
     """
     signs = list(answers.keys())
@@ -171,7 +171,8 @@ def build_options(answers, sign):
     """
     Builds a list of options for a zodiac sign.
     Args:
-        answers (dict): A dictionary of zodiac signs and their corresponding answers.
+        answers (dict): A dictionary of zodiac signs and
+        their corresponding answers.
         sign (str): The zodiac sign for which options are being built.
     Returns a list of options, including the correct answer.
     """
@@ -187,11 +188,12 @@ def build_options(answers, sign):
 def test_screen(sign):
     """
     Conducts the Zodiac Traits Test for a specific zodiac sign.
-    This function initiates the test, presents questions and options to the user,
-    evaluates the user's responses, and calculates an affinity score based on correct
-    answers. It also displays a progress bar to track the affinity test progress.
+    This function initiates the test, presents questions and
+    options to the user, evaluates the user's responses, and
+    calculates an affinity score based on correct answers. It also displays
+    a progress bar to track the affinity test progress.
     Args:
-        sign (str): The zodiac sign for which the test is conducted (user zodiac sign).
+        sign (str): The user zodiac sign for which the test is conducted.
     """
     clear()
     print_sign(sign)
@@ -251,12 +253,13 @@ def result_screen(sign):
     print(
         """
     Test complete!  This is your final result! \n
-Remember, a person's personality is influenced by a variety of factors 
-beyond their sun sign. This test was created for fun and entertainment. 
+Remember, a person's personality is influenced by a variety of factors
+beyond their sun sign. This test was created for fun and entertainment.
 Enjoy it in a relaxed manner!\n"""
     )
 
-    print(f"    A brief description about your zodiac sign:{sign_description[sign]}")
+    print(f"""
+        A brief description about your zodiac sign:{sign_description[sign]}""")
 
 
 def statistics(sign=None, result=None):
@@ -281,8 +284,9 @@ def statistics(sign=None, result=None):
 def draw_progressbar(worksheet):
     """
     Draws a progress bar for visualizing data from the given worksheet.
-    This function takes a worksheet as input and visualizes progress data using a progress bar.
-    Each zodiac sign is aligned uniformly within the progress bar by adding spaces at the end.
+    This function takes a worksheet as input and visualizes progress data
+    using a progress bar. Each zodiac sign is aligned uniformly within the
+    progress bar by adding spaces at the end.
     Args:
         worksheet (list): A list of rows containing data to be visualized.
     """
@@ -293,7 +297,7 @@ def draw_progressbar(worksheet):
         if num == 0:
             continue
 
-        # Added a space at the end of each sign to align them in the same space.
+        # Added a space at the end of each sign to align them in the same space
         # Example:
         # sagittarius 11 characters + 5 white space = 15
         # aries 5 characters + 10 white space = 15
@@ -302,7 +306,8 @@ def draw_progressbar(worksheet):
 
         with tqdm(total=100, ncols=60, bar_format=sign + format) as pbar:
             pbar.update(int(float(row[3])))
-    print("")    
+    print("")
+
 
 def choose_screen(menu_id):
     """
@@ -343,8 +348,8 @@ def choose_screen(menu_id):
 
         case 3:
             clear()
-            print("The following percentages reflect the affinity between the characteristics") 
-            print("of each sign and the answers provided in the previously completed tests.\n")
+            print(" Affinity percentages between the characteristics of each")
+            print(" sign and the answers collected in the previous tests.\n")
             if not worksheet:
                 worksheet = statistics()
 
