@@ -201,14 +201,14 @@ The corrections were implemented in accordance with the validator's suggestions.
 
   Even though the range of options was adjusted from 1 to 4, initially the options were still displayed from 0 to 3. After fixing this issue, a new complication arose. Although the options were displayed correctly from 1 to 4, the program still internally associated them as values from 0 to 3. This caused confusion when checking if the user had selected the correct answer.
 
-![bug - correct numbering](/assets/docs/bug1-solved.png)
+![bug - correct numbering](/assets/docs/bug1.png)
 
 
   * Action Taken:
 
   Firstly, the section of the code responsible for generating the answer options was identified. Specific changes were made in three parts of the code by adding the number 1 to correctly identify the user's response and ensure that the options were numbered from 1 to 4.
 
-![Solved bug - correct numbering](/assets)
+![Solved bug - correct numbering](/assets/docs/bug1-solved.png)
 
 #### Naming Conflict
 
