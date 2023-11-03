@@ -183,11 +183,26 @@ The final option (4) in the menu is 'Exit Program,' which allows users to conclu
 
 ### Validator Testing  
 
-* Python PEP8 Validation:  
+#### Python PEP8 Validation 
 
-In order to ensure code quality, the program's code was validated and corrected using PEP 8.
+To ensure compliance with coding best practices, I used the PEP8 validator to identify and rectify any issues in my code. 
+The identified errors were primarily related to improper use of whitespace, punctuation, and exceeding line length. All of these issues have been appropriately addressed, ensuring adherence to coding best practices.
+   
+   * run.py:
 
-![PEP8 Validation - Index](/assets/docs/pep8ci-1.png) 
+![PEP8 Validation - run.py](/assets/docs/pep8ci-run1.png)
+
+![PEP8 Validation - run.py solved](/assets/docs/pep8ci-run2.png) 
+
+  * data.py:
+
+![PEP8 Validation - data.py](/assets/docs/pep8ci-data.png)
+
+![PEP8 Validation - data.py solved](/assets/docs/pep8ci-data1.png) 
+
+  *auth.py:
+
+![PEP8 Validation - auth.py solved](/assets/docs/pep8ci-auth.png) 
 
 The corrections were implemented in accordance with the validator's suggestions.
 
@@ -463,4 +478,4 @@ Laura Mayock, the Cohort Facilitator at Code Institute, for consistently steerin
 
 My friends Ivan Frezza and Bruna Andelieri, who provided valuable insights and clarified uncertainties about my code.
 
-My husband Jasser, for always motivating me, for his unwavering support, and for his patience throughout my study period.
+My husband Jasser, for always motivating me and for his unwavering support.
