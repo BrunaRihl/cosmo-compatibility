@@ -236,6 +236,8 @@ def test_screen(sign):
             while True:
                 try:
                     answer = int(input("\nEnter an answer: "))
+                    if answer not in range(1,4):
+                        raise ValueError
                     answer = options[answer - 1]
                 except IndexError:
                     print("Invalid option. Choose between 1 and 4")
@@ -315,15 +317,15 @@ def draw_progressbar(worksheet):
         sign = row[0]
         responses = int(row[1])  # Number of responses
         accuracy = float(row[3])  # Accuracy percentage
-        
+
         # Added a space at the end of each sign to align them in the same space
         # Example:
         # sagittarius 11 characters + 4 white space = 12
         # aries 5 characters + 7 white space = 12
         space = " " * (word_len_max - len(sign))
-        display_text = f"{sign}({responses}):{space}"
+        display_t = f"{sign}({responses}):{space}"
 
-        with tqdm(total=100, ncols=60, bar_format=display_text + format) as pbar:
+        with tqdm(total=100, ncols=60, bar_format=display_t + format) as pbar:
             pbar.update(int(accuracy))
     print("")
 
