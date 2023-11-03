@@ -306,7 +306,8 @@ Capricorn is an earth sign ruled by Saturn.
 Capricorns are ambitious, disciplined, and take a pragmatic approach to life.
 They value responsibility and long-term success.
     """,
-    "aquarius": """
+    "aquarius": 
+    """
 Aquarius (January 20 - February 18):
 Aquarius is an air sign ruled by Uranus (formerly Saturn).
 Aquarians are visionary, humanitarian, and value originality.
