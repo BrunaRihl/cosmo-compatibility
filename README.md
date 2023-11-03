@@ -256,7 +256,7 @@ Implemented a specific check for those born in January under Capricorn. Adjustme
 
   * Bug Description:
 
-During the development of my project, I imported the "os" module to clear the screen. However, after implementation, I noticed that the screen wasn't being cleared properly. This resulted in the creation of extra white spaces above the content of the new screens that were opening.
+During the development of my project, I imported the "os" module to clear the screen. However, after deployment, I noticed that the screen wasn't being cleared properly. This resulted in the creation of extra white spaces above the content of the new screens that were opening.
 
   * Action Taken:
 
@@ -432,6 +432,8 @@ While working on the development of my python program, there were occasions wher
 * [gspread.org - Examples of gspread Usage](https://docs.gspread.org/en/latest/user-guide.html)
 
 * [Stackoverflow - Conditional import of modules in Python](https://stackoverflow.com/questions/3496592/conditional-import-of-modules-in-python)
+
+* [dateutil - powerful extensions to datetime](https://dateutil.readthedocs.io/en/stable/)
 
 * [README Example](https://github.com/kera-cudmore/readme-examples/blob/main/milestone1-readme.md): To write the README file, I followed the structure and table format (testing section) from the readme-examples repository by Kera Cudmore.
 

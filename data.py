@@ -87,29 +87,20 @@ data = [
         "answer": {
             "aries": "Taking action and confronting them directly.",
             "taurus": "Seeking comfort and emotional stability.",
-            "gemini": "Talking to others to gain different perspectives.",
+            "gemini": "Talking to others for different perspectives.",
             "cancer": "Retreating to a safe space to process emotions.",
-            "leo": """Expressing oneself confidently and seeking attention
-and support.""",
-            "virgo": """Analyzing the situation in detail to find practical
-solutions.""",
-            "libra": """Striving for emotional balance and trying to find
-harmony.""",
-            "scorpio": """Delving deep into emotions and seeking to understand
-the reasons behind them.""",
-            "sagittarius": """Facing challenges with optimism and seeking new
-perspectives.""",
-            "capricorn": """Keeping calm and finding rational solutions to
-overcome obstacles.""",
-            "aquarius": """Finding innovative ways to deal with emotions and
-seeking independence.""",
-            "pisces": """Surrendering to emotions and seeking creative ways to
-deal with them."""
+            "leo": "Expressing confidently, seeking attention and support.",
+            "virgo": "Analyzing the situation to find practical solutions.",
+            "libra": "Striving for emotional balance, trying to find harmony.",
+            "scorpio": "Exploring emotions deeply, seeking understanding.",
+            "sagittarius": "Seeking new perspectives with optimism.",
+            "capricorn": "Staying calm, finding rational solutions.",
+            "aquarius": "Seeking new ways to handle emotions with independence",
+            "pisces": "Embracing emotions, finding creative coping strategies."
         }
     },
     {
-        "question": """Choose the option that best describes your approach
-to life?""",
+        "question": "Describe your approach to life in a few words:",
         "answer": {
             "aries": "Entrepreneurial",
             "taurus": "Balanced",
@@ -126,8 +117,7 @@ to life?""",
         }
     },
     {
-        "question": """Choose the word that best describes your communication
-style:""",
+        "question": "Describe your communication style in one word:",
         "answer": {
             "aries": "Direct",
             "taurus": "Calm",
@@ -144,8 +134,7 @@ style:""",
         }
     },
     {
-        "question": """Which of these activities do you prefer to do in your
-free time?""",
+        "question": "What activity do you prefer in your free time?",
         "answer": {
             "aries": "Practice a sport",
             "taurus": "Read a book",
@@ -162,8 +151,7 @@ free time?""",
         }
     },
     {
-        "question": """Choose the option that best aligns with your
-relationship preferences:""",
+        "question": "Choose the best fit for your relationship preferences:",
         "answer": {
             "aries": "Passionate and intense",
             "taurus": "Stable and loyal",
@@ -183,26 +171,17 @@ relationship preferences:""",
         "question": "How do you deal with unexpected changes?",
         "answer": {
             "aries": "Adapt quickly and embrace the change.",
-            "taurus": """Take time to assess the situation and then
-make adjustments.""",
-            "gemini": """Appreciate the novelty and seek to understand
-all possibilities.""",
-            "cancer": """Get emotionally shaken, but find support to deal
-with it.""",
+            "taurus": "Assess the situation and then make adjustments.",
+            "gemini": "Appreciate the novelty and seek new possibilities",
+            "cancer": "Get emotionally shaken, yet find support to cope.",
             "leo": "Face the change with confidence and determination.",
             "virgo": "Analyze details and create a plan to handle the change.",
-            "libra": """Seek balance and find ways to handle the
-change harmoniously.""",
-            "scorpio": """Delve into the reasons behind the change and adapt
-with intensity.""",
-            "sagittarius": """Face the change as a new adventure and seize
-the opportunity.""",
-            "capricorn": """Stay calm and seek a practical approach to handle
-the change.""",
-            "aquarius": """See the change as an opportunity for growth and
-innovation.""",
-            "pisces": """Feel the change deeply and seek ways to emotionally
-connect with it."""
+            "libra": "Seek balance, find ways to handle change harmoniously.",
+            "scorpio": "Explore the reasons behind and adapt intensely.",
+            "sagittarius": "Seize the opportunity as a new adventure.",
+            "capricorn": "Maintain composure and devise a strategic response.",
+            "aquarius": "View change as a chance for growth and innovation.",
+            "pisces": "Feel change deeply, seek emotional connection with it."
         }
     },
     {
@@ -210,8 +189,7 @@ connect with it."""
         "answer": {
             "aries": "Take the lead and take immediate action.",
             "taurus": "Contribute with my experience and stability.",
-            "gemini": """Exchange ideas and collaborate with different
-perspectives.""",
+            "gemini": "Share ideas and collaborate with diverse views.",
             "cancer": "Focus on creating an environment of emotional support.",
             "leo": "Inspire the group to achieve ambitious goals.",
             "virgo": "Pay attention to details and organize tasks.",
@@ -234,13 +212,10 @@ perspectives.""",
             "virgo": "Meticulously organize my time and resources.",
             "libra": "Seek to balance quality with efficiency.",
             "scorpio": "Concentrate intensely and face challenges head-on.",
-            "sagittarius": """Maintain a positive attitude and focus on
-problem-solving.""",
+            "sagittarius": "Stay positive, focus on problem-solving.",
             "capricorn": "Plan strategically and keep my focus on the goal.",
-            "aquarius": """Introduce innovation and new approaches to deal
-with pressure.""",
-            "pisces": """Trust my intuition and find creative ways to handle
-the situation."""
+            "aquarius": "Innovate, find new approaches to deal with pressure.",
+            "pisces": "Trust my intuition, get creative to handle situations."
         }
     },
     {
@@ -261,7 +236,6 @@ the situation."""
         }
     }
 ]
-
 
 """
 'sign_description' is a dictionary containing detailed descriptions of each

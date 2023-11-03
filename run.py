@@ -30,24 +30,32 @@ def get_sign(day, month):
     year = get_year()
     birthday = datetime.date(year, month, day)
 
-for sign in signs:
-    period = signs[sign]
-    if sign == "Capricorn" and birthday.month == 1:
-        # Check if the sign is Capricorn and the birthday month is January
-        period["start"] = datetime.date(year-1, period["start"].month, period["start"].day)
-        period["end"] = datetime.date(year, period["end"].month, period["end"].day)
-        # If so, adjust the start and end dates to account for the transition 
-        #from December to January
-    if period["start"].month > period["end"].month:
-        period["end"] = period["end"] + relativedelta(years=1)
-        # If the start month is greater than the end month, adjust the end date 
-        #to account for the transition to the next year
-    if period["start"] <= birthday <= period["end"]:
-        return sign
-        # Check if the birthday falls within the date range for the current zodiac sign.
-        # If so, return the zodiac sign.
+    year = get_year()
+    birthday = datetime.date(year, month, day)
 
-return "Invalid month or day"
+    for sign in signs:
+        period = signs[sign]
+        if sign == "Capricorn" and birthday.month == 1:
+            # Check if the sign is Capricorn and the birthday month is January
+            period["start"] = datetime.date(
+                year-1, period["start"].month, period["start"].day
+            )
+            period["end"] = datetime.date(
+                year, period["end"].month, period["end"].day
+            )
+            # If so, adjust the start and end dates to account for the
+            #  transition from December to January
+        if period["start"].month > period["end"].month:
+            # If the start month is greater than the end month, adjust the
+            #  end date to account for the transition to the next year
+            period["end"] = period["end"] + relativedelta(years=1)
+        if period["start"] <= birthday <= period["end"]:
+            # Check if the birthday falls within the date range for the
+            #  current zodiac sign.If so, return the zodiac sign.
+            return sign
+
+    return "Invalid month or day"
+
 
 def header():
     """
@@ -265,7 +273,7 @@ Enjoy it in a relaxed manner!"""
     )
 
     print(f"""
-        A brief description about your zodiac sign:{sign_description[sign]}""")
+      A brief description about your zodiac sign:{sign_description[sign]}""")
 
 
 def statistics(sign=None, result=None):
@@ -333,7 +341,8 @@ def choose_screen(menu_id):
             clear()
             while True:
                 try:
-                    month = int(input("Enter the month of your birth (1-12): "))
+                    month = int(input("Enter the month of your "
+                                      "birth (1-12): "))
                     day = int(input("Enter the day of your birth (1-31): "))
 
                     if month == 2 and day == 29:
