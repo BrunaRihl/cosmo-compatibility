@@ -177,6 +177,9 @@ The final option (4) in the menu is 'Exit Program,' which allows users to conclu
 | Progress Bar Display | The progress bar should be visible throughout the entire test and at the end of the test displaying the result | Answering test questions until the end | The progress bar is visible throughout the entire test | Pass |
 | Correct answer | When the user selects the correct answer, the percentage and the progress bar increase by 10% | Choosing the option with the correct answer and pressing Enter | The percentage and the progress bar increase by 10% | Pass |
 | Inorrect answer | When the user selects the incorrect answer, the percentage and the progress bar remain at the same value | Choosing the option with the incorrect answer and pressing Enter | The percentage and the progress bar remain at the same value | Pass |
+| **`Clear the terminal`** |
+|  |  |  |  |  |
+| Clear() - new screen | Every time the user switches screens, the terminal should be cleared | Navigating the test and changing screens | The terminal is properly cleared each time it switches screens | Pass |
 | **`Worksheet`** |
 |  |  |  |  |  |
 | Data update | When the test is completed, the spreadsheet should be updated with the number of participants who have completed it, the number of correct answers, and the average compatibility percentage | Finishing the test and checking the updates | The spreadsheet was updated correctly | Pass |
