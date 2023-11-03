@@ -305,21 +305,26 @@ def draw_progressbar(worksheet):
         worksheet (list): A list of rows containing data to be visualized.
     """
 
-    format = ":|{bar}|{percentage:3.0f}%"
-    word_len_max = 15
+    format = "|{bar}|{percentage:3.0f}%"
+    word_len_max = 12
+
     for num, row in enumerate(worksheet):
         if num == 0:
             continue
 
+        sign = row[0]
+        responses = int(row[1])  # Number of responses
+        accuracy = float(row[3])  # Accuracy percentage
+        
         # Added a space at the end of each sign to align them in the same space
         # Example:
-        # sagittarius 11 characters + 5 white space = 15
-        # aries 5 characters + 10 white space = 15
-        space = " " * (word_len_max - len(row[0]))
-        sign = row[0] + space
+        # sagittarius 11 characters + 4 white space = 12
+        # aries 5 characters + 7 white space = 12
+        space = " " * (word_len_max - len(sign))
+        display_text = f"{sign}({responses}):{space}"
 
-        with tqdm(total=100, ncols=60, bar_format=sign + format) as pbar:
-            pbar.update(int(float(row[3])))
+        with tqdm(total=100, ncols=60, bar_format=display_text + format) as pbar:
+            pbar.update(int(accuracy))
     print("")
 
 
@@ -364,7 +369,8 @@ def choose_screen(menu_id):
         case 3:
             clear()
             print(" Affinity percentages between the characteristics of each")
-            print(" sign and the answers collected in the previous tests.\n")
+            print(" sign and the answers collected in the previous tests.")
+            print("*Key: Sign (Number of participants): Compatibility (%)")
             if not worksheet:
                 worksheet = statistics()
 
