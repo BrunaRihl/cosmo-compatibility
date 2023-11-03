@@ -237,6 +237,7 @@ data = [
     }
 ]
 
+
 """
 'sign_description' is a dictionary containing detailed descriptions of each
 zodiac sign. Each sign's description includes information about their ruling
@@ -246,78 +247,76 @@ and tendencies at the end of the test.
 """
 sign_description = {
     "aries": """
-    Aries (March 21 - April 19):
-    Aries is a fire sign ruled by Mars.
-    People of this sign are known for their energy,
-    courage, and impulsiveness. They are natural leaders,
-    often acting with determination and enthusiasm.
+Aries (March 21 - April 19):
+Aries is a fire sign ruled by Mars.
+People of this sign are known for their energy, courage, and impulsiveness.
+They are natural leaders, often acting with determination and enthusiasm.
     """,
     "taurus": """
-    Taurus (April 20 - May 20):
-    Taurus is an earth sign ruled by Venus.
-    Taureans are practical, patient, and value stability.
-    They are known for their loyalty and appreciation for material comfort.
+Taurus (April 20 - May 20):
+Taurus is an earth sign ruled by Venus.
+Taureans are practical, patient, and value stability.
+They are known for their loyalty and appreciation for material comfort.
     """,
     "gemini": """
-    Gemini (May 21 - June 20):
-    Gemini is an air sign ruled by Mercury.
-    People of this sign are communicative, adaptable, and often
-    have quick minds.
-    They are curious and appreciate variety.
+Gemini (May 21 - June 20):
+Gemini is an air sign ruled by Mercury.
+People of this sign are communicative, adaptable, and often have quick minds.
+They are curious and appreciate variety.
     """,
     "cancer": """
-    Cancer (June 21 - July 22):
-    Cancer is a water sign ruled by the Moon.
-    Cancerians are highly sensitive and emotional.
-    They value family, home, and have a strong intuition.
+Cancer (June 21 - July 22):
+Cancer is a water sign ruled by the Moon.
+Cancerians are highly sensitive and emotional.
+They value family, home, and have a strong intuition.
     """,
     "leo": """
-    Leo (July 23 - August 22):
-    Leo is a fire sign ruled by the Sun.
-    Leos are charismatic, confident, and have a commanding presence.
-    They value creativity and often take on leadership roles.
+Leo (July 23 - August 22):
+Leo is a fire sign ruled by the Sun.
+Leos are charismatic, confident, and have a commanding presence.
+They value creativity and often take on leadership roles.
     """,
     "virgo": """
-    Virgo (August 23 - September 22):
-    Virgo is an earth sign ruled by Mercury.
-    Virgos are analytical, methodical, and have a critical eye for detail.
-    They value organization and efficiency.
+Virgo (August 23 - September 22):
+Virgo is an earth sign ruled by Mercury.
+Virgos are analytical, methodical, and have a critical eye for detail.
+They value organization and efficiency.
     """,
     "libra": """
-    Libra (September 23 - October 22):
-    Libra is an air sign ruled by Venus.
-    Librans are diplomatic, fair-minded, and value harmony in relationships.
-    They are known for their elegance and sense of style.
+Libra (September 23 - October 22):
+Libra is an air sign ruled by Venus.
+Librans are diplomatic, fair-minded, and value harmony in relationships.
+They are known for their elegance and sense of style.
     """,
     "scorpio": """
-    Scorpio (October 23 - November 21):
-    Scorpio is a water sign ruled by Pluto (formerly Mars).
-    Scorpios are intense, passionate, and often possess a mysterious aura.
-    They value authenticity and loyalty.
+Scorpio (October 23 - November 21):
+Scorpio is a water sign ruled by Pluto (formerly Mars).
+Scorpios are intense, passionate, and often possess a mysterious aura.
+They value authenticity and loyalty.
     """,
     "sagittarius": """
-    Sagittarius (November 22 - December 21):
-    Sagittarius is a fire sign ruled by Jupiter.
-    Sagittarians are optimistic, adventurous, and have an expansive mind.
-    They value freedom and the pursuit of knowledge.
+Sagittarius (November 22 - December 21):
+Sagittarius is a fire sign ruled by Jupiter.
+Sagittarians are optimistic, adventurous, and have an expansive mind.
+They value freedom and the pursuit of knowledge.
     """,
     "capricorn": """
-    Capricorn (December 22 - January 19):
-    Capricorn is an earth sign ruled by Saturn.
-    Capricorns are ambitious, disciplined, and take a pragmatic
-    approach to life.
-    They value responsibility and long-term success.
+Capricorn (December 22 - January 19):
+Capricorn is an earth sign ruled by Saturn.
+Capricorns are ambitious, disciplined, and take a pragmatic approach to life.
+They value responsibility and long-term success.
     """,
     "aquarius": """
-    Aquarius (January 20 - February 18):
-    Aquarius is an air sign ruled by Uranus (formerly Saturn).
-    Aquarians are visionary, humanitarian, and value originality.
-    They are progressive and have an innovative mind.
+Aquarius (January 20 - February 18):
+Aquarius is an air sign ruled by Uranus (formerly Saturn).
+Aquarians are visionary, humanitarian, and value originality.
+They are progressive and have an innovative mind.
     """,
     "pisces": """
-    Pisces (February 19 - March 20):
-    Pisces is a water sign ruled by Neptune (formerly Jupiter).
-    Pisceans are intuitive, sensitive, and often have an artistic nature.
-    They value compassion and spirituality.
+Pisces (February 19 - March 20):
+Pisces is a water sign ruled by Neptune (formerly Jupiter).
+Pisceans are intuitive, sensitive, and often have an artistic nature.
+They value compassion and spirituality.
     """
 }
+
