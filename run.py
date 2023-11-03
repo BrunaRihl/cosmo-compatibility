@@ -373,6 +373,7 @@ def choose_screen(menu_id):
 
         case 4:
             clear()
+            header()
             print("\nThank you for exploring CosmoCompatibility!")
             print("Have a great day and see you next time!\n")
 
