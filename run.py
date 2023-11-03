@@ -154,8 +154,8 @@ def print_instructions():
     print(" Instructions:")
     print("Choose the option that best aligns with your personality.")
     print("If your choice matches the personality description of your zodiac")
-    print("sign, the compatibility progress bar will increase")
-    print("Choose from options 1 to 4. Type your choice and press 'Enter'\n")
+    print("sign, the compatibility progress bar will increase.")
+    print("Choose from options 1 to 4. Type your choice and press 'Enter'.\n")
 
 
 def shuffle_data(s_data):
@@ -238,10 +238,10 @@ def test_screen(sign):
                     answer = int(input("\nEnter an answer: "))
                     answer = options[answer - 1]
                 except IndexError:
-                    print("invalid option. Try between 1 and 4")
+                    print("Invalid option. Choose between 1 and 4")
                     continue
                 except ValueError:
-                    print("invalid option. Try between 1 and 4")
+                    print("Invalid option. Choose between 1 and 4")
                     continue
                 break
             clear()
