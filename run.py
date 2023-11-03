@@ -151,7 +151,7 @@ def print_sign(zodiac_sign):
 
 
 def print_instructions():
-    print("Instructions:")
+    print(" Instructions:")
     print("Choose the option that best aligns with your personality.")
     print("If your choice matches the personality description of your zodiac")
     print("sign, the compatibility progress bar will increase")
@@ -227,7 +227,7 @@ def test_screen(sign):
             shuffled_options = shuffle_data(options)
 
             # To assemble the question
-            print(f"\n\n{question}")
+            print(f"\n\nQuestion {num + 1}/10:\n{question}\n")
             for n, option in enumerate(shuffled_options, 1):
                 answer = list(option.values())[0]
                 print(f"{n}: {answer}")
@@ -273,7 +273,7 @@ Enjoy it in a relaxed manner!"""
     )
 
     print(f"""
-      A brief description about your zodiac sign:{sign_description[sign]}""")
+ A brief description about your zodiac sign:{sign_description[sign]}""")
 
 
 def statistics(sign=None, result=None):
