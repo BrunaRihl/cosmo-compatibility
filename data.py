@@ -136,7 +136,7 @@ data = [
     {
         "question": "What activity do you prefer in your free time?",
         "answer": {
-            "aries": "Practice a sport",
+            "aries": "Sports practice",
             "taurus": "Read a book",
             "gemini": "Attend social events",
             "cancer": "Explore a new place",
@@ -160,9 +160,9 @@ data = [
             "leo": "Social and outgoing",
             "virgo": "Balanced and fair",
             "libra": "Harmonious and cooperative",
-            "scorpio": "Intense and passionate",
-            "sagittarius": "Open to new ideas",
-            "capricorn": "Stable and loyal",
+            "scorpio": "Mysterious and alluring",
+            "sagittarius": "Vibrant and daring",
+            "capricorn": "Resolute and committed",
             "aquarius": "Innovative and independent",
             "pisces": "Empathetic and sensitive"
         }

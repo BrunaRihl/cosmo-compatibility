@@ -236,7 +236,7 @@ def test_screen(sign):
             while True:
                 try:
                     answer = int(input("\nEnter an answer: "))
-                    if answer not in range(1,4):
+                    if answer not in range(1,5):
                         raise ValueError
                     answer = options[answer - 1]
                 except IndexError:
