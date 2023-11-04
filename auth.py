@@ -38,14 +38,14 @@ def update_worksheet(sign, hits):
 
     # update cell player
     number_of_people = cell.col + 1
-    old_player_value = WORKSHEET.cell(cell.row, number_of_people).value
-    new_player_value = int(old_player_value) + 1
+    old_player_value = int(WORKSHEET.cell(cell.row, number_of_people).value)
+    new_player_value = old_player_value + 1
     WORKSHEET.update_cell(cell.row, number_of_people, str(new_player_value))
 
     # update cell hits column
     hits_col = cell.col + 2
-    old_hit_value = WORKSHEET.cell(cell.row, hits_col).value
-    new_hit_value = int(old_hit_value) + hits_col
+    old_hit_value = int(WORKSHEET.cell(cell.row, hits_col).value)
+    new_hit_value = old_hit_value + hits
     WORKSHEET.update_cell(cell.row, hits_col, str(new_hit_value))
 
     # calc compatibility
@@ -59,6 +59,3 @@ def update_worksheet(sign, hits):
 
 def get_worksheet():
     return WORKSHEET.get_all_values()
-
-
-
