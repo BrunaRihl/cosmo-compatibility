@@ -30,29 +30,21 @@ def get_sign(day, month):
     year = get_year()
     birthday = datetime.date(year, month, day)
 
-    year = get_year()
-    birthday = datetime.date(year, month, day)
-
-    for sign in signs:
-        period = signs[sign]
-        if sign == "Capricorn" and birthday.month == 1:
-            # Check if the sign is Capricorn and the birthday month is January
-            period["start"] = datetime.date(
-                year-1, period["start"].month, period["start"].day
-            )
-            period["end"] = datetime.date(
-                year, period["end"].month, period["end"].day
-            )
-            # If so, adjust the start and end dates to account for the
-            #  transition from December to January
-        if period["start"].month > period["end"].month:
-            # If the start month is greater than the end month, adjust the
-            #  end date to account for the transition to the next year
-            period["end"] = period["end"] + relativedelta(years=1)
-        if period["start"] <= birthday <= period["end"]:
-            # Check if the birthday falls within the date range for the
-            #  current zodiac sign.If so, return the zodiac sign.
-            return sign
+    # Check if the birth date falls within the transition dates
+    # between Capricorn and Aquarius
+    if datetime.date(year, 1, 1) <= birthday <= datetime.date(year, 1, 19):
+        return "Capricorn"
+    else:
+        # Loop through the signs to determine the correct sign
+        for sign in signs:
+            period = signs[sign]
+            # Check if the start of the period is in a different year than
+            # the end (e.g., December to January)
+            if period["start"].month > period["end"].month:
+                period["end"] = period["end"] + relativedelta(years=1)
+            # Check if the birth date is within the period for the current sign
+            if period["start"] <= birthday <= period["end"]:
+                return sign
 
     return "Invalid month or day"
 
@@ -236,7 +228,7 @@ def test_screen(sign):
             while True:
                 try:
                     answer = int(input("\nEnter an answer: "))
-                    if answer not in range(1,5):
+                    if answer not in range(1, 5):
                         raise ValueError
                     answer = options[answer - 1]
                 except IndexError:
