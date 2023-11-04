@@ -15,7 +15,7 @@ def get_year():
     """
     Returns the year for calculations.
     This function provides a way to use the datetime module
-    independently of thesystem's actual year.
+    independently of the system's actual year.
     """
     return 2023
 
@@ -134,7 +134,7 @@ astrology is a belief system and is not based on empirical scientific evidence.
 
 def clear():
     """
-    This function checks the operating system and uses the appropriate command
+    This function uses the command
     to clears the terminal screen.
     """
     print('\033c')
@@ -171,11 +171,11 @@ def shuffle_data(s_data):
 
 def shuffle_answers(answers):
     """
-    Randomly selects a zodiac sign from a dictionary of answers.
+    Randomly selects a dictionary of answers.
     Args:
         answers (dict): A dictionary of zodiac signs and
         their corresponding answers.
-    Returns str: A randomly selected zodiac sign.
+    Returns str: A randomly selected answer list.
     """
     signs = list(answers.keys())
     return signs[random.randint(1, len(signs) - 1)]
@@ -183,12 +183,12 @@ def shuffle_answers(answers):
 
 def build_options(answers, sign):
     """
-    Builds a list of options for a zodiac sign.
+    Builds a list of answer options for a question.
     Args:
         answers (dict): A dictionary of zodiac signs and
         their corresponding answers.
         sign (str): The zodiac sign for which options are being built.
-    Returns a list of options, including the correct answer.
+    Returns a list of shuffled options, including the correct answer.
     """
     show = [{sign: answers.pop(sign)}]
     for _ in range(1, 4):
@@ -320,7 +320,7 @@ def draw_progressbar(worksheet):
 
         # Added a space at the end of each sign to align them in the same space
         # Example:
-        # sagittarius 11 characters + 4 white space = 12
+        # sagittarius 11 characters + 1 white space = 12
         # aries 5 characters + 7 white space = 12
         space = " " * (word_len_max - len(sign))
         display_t = f"{sign}({responses}):{space}"
